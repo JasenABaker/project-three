@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 import HomePage from './components/HomePage'
 import UserPage from'./components/UserPage'

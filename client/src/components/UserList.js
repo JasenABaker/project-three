@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-
+import User from './User'
 
 const Container = styled.data `
     height: 75vh;
@@ -14,7 +14,7 @@ const Container = styled.data `
 
 
 const UserList = (props) => {
-    
+    console.log(props)
         return(
             <Container>
                 {

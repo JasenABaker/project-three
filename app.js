@@ -32,7 +32,7 @@ app.get('/', (req,res) => {
   res.sendFile(__dirname + '/client/build/index.html')
 })
 const UserController = require('./routes/UserController')
-app.use('/Users', UserController)
+app.use('/api/Users', UserController)
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

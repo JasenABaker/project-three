@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import landscape from '../images/landscape.jpg'
 import Header from './styled-components/Header'
