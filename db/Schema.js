@@ -33,6 +33,11 @@ const UserSchema = new Schema (
             default: 0,
             unique: false,
         },
+        photoUrl:{
+            type: String,
+            required: false,
+            default: 'https://www.ttmf-mortgages.com/wordpress/wp-content/uploads/2014/01/happy-vacation-man.jpg'
+        },
         wordsVisited: [],
         locationsVisited: []
     },
