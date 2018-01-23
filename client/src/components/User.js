@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const UserCard = styled.div`
-    height: 60vh;
+    height: 65vh;
     width: 25vw;
     display: flex;
     flex-direction: column;
@@ -39,22 +40,25 @@ const Line = styled.div`
 
 
 
-const User = (props) => {
+const User = (props, index) => {
 
     return (
-        <UserCard>
-        <ImgDiv>
-        <img src={props.user.photoUrl} alt= {props.user.userName} />
-        </ImgDiv>
-        <h3>{props.user.userName}</h3>
-        <Line/>
-        <div>
-        <p><span>Name:</span> {props.user.firstName} {props.user.lastName}</p>
-        <p><span>From: </span> {props.user.home}</p>
-        <p><span>Number of Trips:</span> {props.user.numberOfTrips}</p>
-        </div>
-        </UserCard>
+        <Link to={`/Users/${props.user._id}`}>
+            <UserCard>
+                <ImgDiv>
+                    <img src={props.user.photoUrl} alt={props.user.userName} />
+                </ImgDiv>
+                <h3>{props.user.userName}</h3>
+                <Line />
+                <div>
+                    <h4>Name</h4> <p>{props.user.firstName} {props.user.lastName}</p>
+                    <h4>From</h4> <p>{props.user.home}</p>
+                    <h4>Number of Trips:</h4> <p>{props.user.numberOfTrips}</p>
+                </div>
+            </UserCard>
+        </Link>
     )
+
 }
 
 export default User
