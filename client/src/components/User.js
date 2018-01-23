@@ -43,7 +43,7 @@ const Line = styled.div`
 const User = (props, index) => {
 
     return (
-        <Link to={`/Users/${props.user._id}`}>
+        <Link to={`/Users/${props.user._id}`} style={{textDecoration: 'none', color: 'WindowText'}}>
             <UserCard>
                 <ImgDiv>
                     <img src={props.user.photoUrl} alt={props.user.userName} />

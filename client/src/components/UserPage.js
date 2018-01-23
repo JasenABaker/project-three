@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 import UserList from './UserList'
 import Header from './styled-components/Header'
@@ -15,13 +16,13 @@ class UserPage extends Component {
     }
 
     render() {
-        console.log(this.state.users)
+    
         return (
             <div>
                 <Header>
                     <h1>Fanta<span>See</span></h1>
                     <nav><ul>
-                        <li>Home</li>
+                    <Link to='/' style={{textDecoration: 'none', color: 'inherit'}}><li>Home</li></Link>
                         <li>Worlds</li>
                     </ul>
                     </nav>
