@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import landscape from '../images/landscape.jpg'
 import Header from './styled-components/Header'
 import Splash from './styled-components/Splash'
+
 
 class HomePage extends Component {
     render() {
@@ -19,7 +21,7 @@ class HomePage extends Component {
                 </Header>
                 <Splash>
                     <img src={landscape} alt="landscape" />
-                    <a>Users</a>
+                    <Link to='/users'><a>Users</a></Link>
                 </Splash>
 
             </div>
