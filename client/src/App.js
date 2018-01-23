@@ -1,21 +1,38 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import styled from 'styled-components'
+import './App.css'
+import landscape from './images/landscape.jpg'
+import Header from './components/styled-components/Header'
+import Splash from './components/styled-components/Splash'
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div >
+        <style>
+          @import url('https://fonts.googleapis.com/css?family=Risque');
+        </style>
+        <Header>
+          <h1>Fanta<span>See</span></h1>
+          <nav><ul>
+            <li>Home</li>
+            <li>Users</li>
+            <li>Worlds</li>
+          </ul>
+          </nav>
+        </Header>
+        <Splash>
+          <img src={landscape} alt="landscape"/>
+          <a>Users</a>
+        </Splash>
+        <div>
+
+        </div>
+
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
