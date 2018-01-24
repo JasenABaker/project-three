@@ -30,7 +30,8 @@ const WorldsSchema = new Schema (
             type: String,
             required: false,
             default: 'https://img00.deviantart.net/99b4/i/2013/005/c/9/middle_earth_map_by_kethwyn2013-d5qih1p.jpg'
-        }
+        },
+        locations: []
     },
     {
         timestamps: {}
