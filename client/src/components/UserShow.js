@@ -2,7 +2,18 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import styled from 'styled-components'
+import WorldView from './WorldView'
 import Header from './styled-components/Header'
+
+const Container = styled.div`
+    height: 85vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    h2{
+        align-self: center;
+    }
+`
 
 const Top = styled.div`
     height: 40vh;
@@ -49,13 +60,21 @@ class UserShow extends Component {
                     </ul>
                     </nav>
                 </Header>
+            <Container>
                 <Top>
                 <img src={user.photoUrl} alt={user.userName}/>
                 <h1>{user.userName}</h1>
                 </Top>
-                <div>
+                
                     <h2>Places Visited</h2>
+                
+                <div>
+                    <WorldView />
                 </div>
+                <div>
+                    Localsview
+                </div>
+            </Container>
             </div>
         )
     }
