@@ -20,7 +20,7 @@ mongoose.connection.on('error', (error) => {
     process.exit(-1)
 })
 
-const middleEarth = new World ({
+const middleEarth = new World({
     worldName: 'Middle Earth',
     seriesFrom: 'Lord of The Rings',
     description: `Middle-earthwas a large continent of Arda, situated 
@@ -33,7 +33,7 @@ const middleEarth = new World ({
     mapUrl: 'https://img00.deviantart.net/99b4/i/2013/005/c/9/middle_earth_map_by_kethwyn2013-d5qih1p.jpg'
 })
 
-const wizardingWorld = new World ({
+const wizardingWorld = new World({
     worldName: 'The Wizarding World',
     seriesFrom: 'Harry Potter',
     description: `The wizarding world, also referred to as the 
@@ -47,11 +47,11 @@ const wizardingWorld = new World ({
     territory, such as a Ministry of Magic or a Council of Magic. 
     The International Confederation of Wizards serves as a wizarding 
     intergovernmental organisation.`,
-    novelCover:'https://typeset-beta.imgix.net/lovelace/uploads/491/4ff201f0-84b1-0133-9fd7-0e7c926a42af.png',
-    mapUrl:'http://img.auctiva.com/imgdata/1/4/4/1/6/8/2/webimg/459583018_o.jpg'
+    novelCover: 'https://typeset-beta.imgix.net/lovelace/uploads/491/4ff201f0-84b1-0133-9fd7-0e7c926a42af.png',
+    mapUrl: 'http://img.auctiva.com/imgdata/1/4/4/1/6/8/2/webimg/459583018_o.jpg'
 })
 
-const sevenKingdoms = new World ({
+const sevenKingdoms = new World({
     worldName: 'The Seven Kingdoms',
     seriesFrom: 'Song of Ice and Fire',
     description: `The Seven Kingdoms is the name given to the 
@@ -59,14 +59,14 @@ const sevenKingdoms = new World ({
     its numerous offshore islands, ruled by the King of the 
     Andals and the First Men from the Red Keep in the city of 
     King's Landing.`,
-    novelCover:'https://cdn.waterstones.com/bookjackets/large/9780/0075/9780007578580.jpg',
+    novelCover: 'https://cdn.waterstones.com/bookjackets/large/9780/0075/9780007578580.jpg',
     mapUrl: 'https://vignette1.wikia.nocookie.net/gameofthrones/images/7/71/Westeros_HBO.png/revision/latest?cb=20111113154717'
 })
 
-const wheelOfTime = new World ({
+const wheelOfTime = new World({
     worldName: 'The Westlands',
     seriesFrom: 'The Wheel of Time',
-    description:`The Westlands contains multiple kingdoms and 
+    description: `The Westlands contains multiple kingdoms and 
     city-states and is bounded on the east by a mountain range. 
     To the east is a desert, the Aiel Waste, inhabited by the 
     Aiel warrior people, who live in small settlements and whose 
@@ -84,8 +84,8 @@ const wheelOfTime = new World ({
     of the way between the ice caps from south to north. A large 
     island in the northwest is separated from the Seanchan mainland 
     by a channel.`,
-    novelCover:'http://1.bp.blogspot.com/-nMceHwqPU2s/TiSPsajp7aI/AAAAAAAAD5c/sfvJbho2ccc/s1600/The%2BGreat%2BHunt%2BUSA.jpg',
-    mapUrl:'http://privat.bahnhof.se/wb160542/bengt/bokfiler/Route%2000%20New%20Spring.jpg'
+    novelCover: 'http://1.bp.blogspot.com/-nMceHwqPU2s/TiSPsajp7aI/AAAAAAAAD5c/sfvJbho2ccc/s1600/The%2BGreat%2BHunt%2BUSA.jpg',
+    mapUrl: 'http://privat.bahnhof.se/wb160542/bengt/bokfiler/Route%2000%20New%20Spring.jpg'
 })
 
 
@@ -93,54 +93,55 @@ const wheelOfTime = new World ({
 
 
 User.remove({}).then(() => {
-    return Worlds.remove({}).then(()=>{
-    const jasenBaker = new User({
-        userName: 'Novemberist',
-        firstName: 'Jasen',
-        lastName: 'Baker',
-        home: 'Georgia, USA',
-        numberOfTrips: 4,
-        photoUrl: 'https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/19224992_10154389810307127_8105888593912301500_n.jpg?oh=829d164640ef2a2856129691823d2f39&oe=5AE15440'
-    })
-    jasenBaker.worldsVisited.push(middleEarth, wizardingWorld, sevenKingdoms, wheelOfTime)
-
-    return jasenBaker.save()
+    return Worlds.remove({})
 }).then(() => {
-    const nintiChance = new User({
-        userName: 'Minti',
-        firstName: 'Ninti',
-        lastName: 'Chance',
-        home: 'Georgia, USA',
-        numberOfTrips: 3,
-        photoUrl: "https://media-exp2.licdn.com/media/AAMAAQDGAAwAAQAAAAAAAA6-AAAAJGU2Yjk2OGQ5LWEyZTMtNGUwOS05NTMxLWUyMDlkYTM0MDliMg.jpg"
-    })
-    return nintiChance.save()
-}).then(() => {
+        const jasenBaker = new User({
+            userName: 'Novemberist',
+            firstName: 'Jasen',
+            lastName: 'Baker',
+            home: 'Georgia, USA',
+            numberOfTrips: 4,
+            photoUrl: 'https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/19224992_10154389810307127_8105888593912301500_n.jpg?oh=829d164640ef2a2856129691823d2f39&oe=5AE15440'
+        })
+        jasenBaker.worldsVisited.push(middleEarth, wizardingWorld, sevenKingdoms, wheelOfTime)
 
-    const timTurnquist = new User({
-        userName: 'TallNord',
-        firstName: 'Tim',
-        lastName: 'Turnquist',
-        home: 'Georgia, USA',
-        numberOfTrips: 5,
-        photoUrl: 'https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/18556054_10103644972677661_4371251815775200258_n.jpg?oh=9c89e51a32954ff7c5b693d862d1888e&oe=5AF1E7D1'
-    })
-    return timTurnquist.save()
-}).then(()=>{
-    return middleEarth.save()
-}).then(()=>{
-    return wizardingWorld.save()
-}).then(()=>{
-    return sevenKingdoms.save()
-}).then(()=>{
-    return wheelOfTime.save()
-}).catch((err)=>{
-    console.log('ERROR SEEDING DATA!!')
-    console.log(err)
-}).then(()=>{
-    mongoose.connection.close()
+        return jasenBaker.save()
+    }).then(() => {
+        const nintiChance = new User({
+            userName: 'Minti',
+            firstName: 'Ninti',
+            lastName: 'Chance',
+            home: 'Georgia, USA',
+            numberOfTrips: 3,
+            photoUrl: "https://media-exp2.licdn.com/media/AAMAAQDGAAwAAQAAAAAAAA6-AAAAJGU2Yjk2OGQ5LWEyZTMtNGUwOS05NTMxLWUyMDlkYTM0MDliMg.jpg"
+        })
+        return nintiChance.save()
+    }).then(() => {
 
-    console.log(`Finished seeding database...
+        const timTurnquist = new User({
+            userName: 'TallNord',
+            firstName: 'Tim',
+            lastName: 'Turnquist',
+            home: 'Georgia, USA',
+            numberOfTrips: 5,
+            photoUrl: 'https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/18556054_10103644972677661_4371251815775200258_n.jpg?oh=9c89e51a32954ff7c5b693d862d1888e&oe=5AF1E7D1'
+        })
+        return timTurnquist.save()
+    }).then(() => {
+        return middleEarth.save()
+    }).then(() => {
+        return wizardingWorld.save()
+    }).then(() => {
+        return sevenKingdoms.save()
+    }).then(() => {
+        return wheelOfTime.save()
+    }).catch((err) => {
+        console.log('ERROR SEEDING DATA!!')
+        console.log(err)
+    }).then(() => {
+        mongoose.connection.close()
+
+        console.log(`Finished seeding database...
     
     Disconnected from MongoDB`)
-})
+    })
