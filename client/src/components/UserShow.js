@@ -2,15 +2,17 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import styled from 'styled-components'
+import { Redirect } from 'react-router-dom'
 import WorldView from './WorldView'
 import Header from './styled-components/Header'
 import { ContainerTwo } from './styled-components/Containers'
+import { ButtonDelete } from './styled-components/Buttons'
 
 
 
 const Top = styled.div`
     height: 40vh;
-    width: 50vw;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,7 +34,8 @@ const Top = styled.div`
 
 class UserShow extends Component {
     state = {
-        user:{}
+        user:{},
+        redirectToUser: false
     }
     async componentWillMount () {
         const res = await axios.get(`/api/Users/${this.props.match.params.userId}`)
@@ -40,10 +43,16 @@ class UserShow extends Component {
     // console.log(res.data)
     }
 
+    deleteUser = async () => {
+        const res = await axios.delete(`/api/Users/${this.props.match.params.userId}`)
+        this.setState({redirectToUser: true})
+    }
+
     render() {
         const user = this.state.user
         return(
             <div>
+                {this.state.redirectToUser ? <Redirect to='/Users'/> : null}
                 <Header>
                     <h1>Fanta<span>See</span></h1>
                     <nav><ul>
@@ -57,6 +66,7 @@ class UserShow extends Component {
                 <Top>
                 <img src={user.photoUrl} alt={user.userName}/>
                 <h1>{user.userName}</h1>
+                <ButtonDelete>Delete</ButtonDelete>
                 </Top>
                 
                     <h2>Places Visited</h2>
