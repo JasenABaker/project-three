@@ -16,8 +16,8 @@ class App extends Component {
     this.setState({ users: response.data })
     //console.log(response.data)
   }
-  // newUser = async () => {
-  //   const response = await axios.post('/api/Users')
+  // newUserPost = async () => {
+  //   const response = await axios.post('/api/Users', this.state.newUser)
   //   const newUser = response.data
   //   const newUsers = [...this.state.users]
   //   this.setState({ users: newUsers })

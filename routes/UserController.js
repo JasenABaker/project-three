@@ -1,5 +1,7 @@
 
 
+
+
 const express = require('express')
 const User = require('../db/models/User')
 const router = express.Router()
@@ -12,11 +14,14 @@ router.get('/', (req,res)=>{
         console.log(err)
     })
 })
-router.post('/', (req,res)=>{
-    User.create({}).then((newUser)=>{
-        res.json(newUser)
+router.post('/', (req,res)=> {
+    const data = req.body
+    console.log("Received New User:", data)
+    const newUser = User.create(data)
+    newUser.save().then((user)=>{
+        res.json(user)
     }).catch((err)=>{
-        console.log(err)
+        console.error(err)
     })
 })
 
