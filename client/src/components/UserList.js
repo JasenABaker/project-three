@@ -1,22 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import User from './User'
-
-const Container = styled.div `
-    height: 75vh;
-    width: 100vw;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-`
+import { ContainerOne } from './styled-components/Containers'
 
 
 
 const UserList = (props) => {
 console.log(props)
         return(
-            <Container>
+            <ContainerOne>
                 {
                     props.users.map((user)=>{
                         return (
@@ -25,7 +17,7 @@ console.log(props)
                     })
                 }
             
-            </Container>
+            </ContainerOne>
         )
 }
 

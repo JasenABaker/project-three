@@ -16,11 +16,17 @@ class App extends Component {
     this.setState({ users: response.data })
     //console.log(response.data)
   }
-  newUser = async () => {
-    const response = await axios.post('/api/Users')
-    const newUser = response.data
-    const newUsers = [...this.state.users]
-    this.setState({ users: newUsers })
+  // newUser = async () => {
+  //   const response = await axios.post('/api/Users')
+  //   const newUser = response.data
+  //   const newUsers = [...this.state.users]
+  //   this.setState({ users: newUsers })
+  // }
+
+  addNewUser = (newUser) =>{
+    const users = [...this.state.users]
+    users.push(newUser)
+    this.setState({users})
   }
 
 
@@ -33,7 +39,7 @@ class App extends Component {
     }
     const newUserPage = () =>{
       return(
-        <NewUser newUser={this.newUser}/>
+        <NewUser addNewUser={this.addNewUser}/>
       )
 
     }

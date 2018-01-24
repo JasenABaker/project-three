@@ -4,16 +4,9 @@ import axios from 'axios'
 import styled from 'styled-components'
 import WorldView from './WorldView'
 import Header from './styled-components/Header'
+import { ContainerTwo } from './styled-components/Containers'
 
-const Container = styled.div`
-    height: 85vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    h2{
-        align-self: center;
-    }
-`
+
 
 const Top = styled.div`
     height: 40vh;
@@ -60,7 +53,7 @@ class UserShow extends Component {
                     </ul>
                     </nav>
                 </Header>
-            <Container>
+            <ContainerTwo>
                 <Top>
                 <img src={user.photoUrl} alt={user.userName}/>
                 <h1>{user.userName}</h1>
@@ -74,7 +67,7 @@ class UserShow extends Component {
                 <div>
                     Localsview
                 </div>
-            </Container>
+            </ContainerTwo>
             </div>
         )
     }
