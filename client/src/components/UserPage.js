@@ -22,6 +22,7 @@ class UserPage extends Component {
                 <Header>
                     <h1>Fanta<span>See</span></h1>
                     <nav><ul>
+                        <li>NewUser</li>
                     <Link to='/' style={{textDecoration: 'none', color: 'inherit'}}><li>Home</li></Link>
                         <li>Worlds</li>
                     </ul>

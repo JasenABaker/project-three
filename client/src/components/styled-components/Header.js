@@ -17,7 +17,7 @@ export const Header = styled.header `
         margin-right: 20px;
         align-self: flex-end;
         height: 40%;
-        width: 20%;
+        width: 30%;
 
     }
     ul{

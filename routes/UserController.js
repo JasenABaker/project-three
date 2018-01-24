@@ -12,6 +12,13 @@ router.get('/', (req,res)=>{
         console.log(err)
     })
 })
+router.post('/', (req,res)=>{
+    User.create({}).then((newUser)=>{
+        res.json(newUser)
+    }).catch((err)=>{
+        console.log(err)
+    })
+})
 
 router.get('/:userId', (req,res)=>{
     const userId = req.params.userId

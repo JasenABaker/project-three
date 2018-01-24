@@ -44,7 +44,7 @@ class UserShow extends Component {
     async componentWillMount () {
         const res = await axios.get(`/api/Users/${this.props.match.params.userId}`)
         this.setState({ user: res.data})
-        console.log(res.data)
+       // console.log(res.data)
     }
 
     render() {
@@ -69,7 +69,7 @@ class UserShow extends Component {
                     <h2>Places Visited</h2>
                 
                 <div>
-                    <WorldView />
+                    <WorldView user={this.state.user}/>
                 </div>
                 <div>
                     Localsview
