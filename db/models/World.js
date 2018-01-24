@@ -4,4 +4,4 @@ const Schema = require('../Schema')
 
 const World = mongoose.model('World', Schema.WorldsSchema)
 
-module.exports = Worlds
+module.exports = World
