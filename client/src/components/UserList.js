@@ -14,7 +14,7 @@ const Container = styled.div `
 
 
 const UserList = (props) => {
-    console.log(props)
+console.log(props)
         return(
             <Container>
                 {

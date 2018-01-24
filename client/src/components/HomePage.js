@@ -6,7 +6,7 @@ import Splash from './styled-components/Splash'
 
 
 class HomePage extends Component {
-    
+
     render() {
         return (
             <div>
@@ -14,14 +14,14 @@ class HomePage extends Component {
                     <h1>Fanta<span>See</span></h1>
                     <nav><ul>
                         <li>Home</li>
-                        <li>Users</li>
+                        <Link to='/Users/new' style={{textDecoration: 'none', color: 'inherit'}}><li>New User</li></Link>
                         <li>Worlds</li>
                     </ul>
                     </nav>
                 </Header>
                 <Splash>
                     <img src={landscape} alt="landscape" />
-                    <Link to='/users'><a>Users</a></Link>
+                    <Link to='/Users' style={{ textDecoration: 'none', color: 'inherit' }}><a>Users</a></Link>
                 </Splash>
 
             </div>
