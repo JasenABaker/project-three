@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Header from './styled-components/Header'
 import axios from 'axios'
-import { ContainerOne } from './styled-components/Containers';
+import { ContainerOneColumn, FormContainer } from './styled-components/Containers';
 import { Redirect } from 'react-router-dom'
 
 
@@ -63,21 +63,21 @@ class NewUser extends Component {
                         </ul>
                         </nav>
                     </Header>
-                    <ContainerOne>
+                    <ContainerOneColumn>
                         <h1>New User</h1>
                         <div>
                             <form onSubmit={this._addNewUser}>
-                                <div>
+                                <FormContainer>
                                     <input name='firstName' type='text' placeholder='First Name' onChange={this.handleInputChange} />
                                     <input name='lastName' type='text' placeholder='Last Name' onChange={this.handleInputChange} />
                                     <input name='userName' type='text' placeholder='User Name' onChange={this.handleInputChange} />
                                     <input name='home' type='text' placeholder='Hometown' onChange={this.handleInputChange} />
                                     <input name='photoUrl' type='text' placeholder='Picture Url' onChange={this.handleInputChange} />
                                     <input type='submit' value='Create New User' />
-                                </div>
+                                </FormContainer>
                             </form>
                         </div>
-                    </ContainerOne>
+                    </ContainerOneColumn>
                 </div>
             )
         }

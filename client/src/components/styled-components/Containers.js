@@ -18,6 +18,19 @@ export const ContainerTwo = styled.div`
         align-self: center;
     }
 `
+export const ContainerOneColumn = ContainerOne.extend`
+    flex-direction: column;
+`
+export const FormContainer = styled.div`
+    height: 40vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #86CB92;
+    border: 2px solid #292F36;
+`
 
 
-export  default { ContainerOne, ContainerTwo }
+export  default { ContainerOne, ContainerTwo, ContainerOneColumn, FormContainer }
