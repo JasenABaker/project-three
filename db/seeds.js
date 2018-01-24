@@ -93,6 +93,7 @@ const wheelOfTime = new World ({
 
 
 User.remove({}).then(() => {
+    return Worlds.remove({}).then(()=>{
     const jasenBaker = new User({
         userName: 'Novemberist',
         firstName: 'Jasen',
@@ -101,6 +102,7 @@ User.remove({}).then(() => {
         numberOfTrips: 4,
         photoUrl: 'https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/19224992_10154389810307127_8105888593912301500_n.jpg?oh=829d164640ef2a2856129691823d2f39&oe=5AE15440'
     })
+    jasenBaker.worldsVisited.push(middleEarth, wizardingWorld, sevenKingdoms, wheelOfTime)
 
     return jasenBaker.save()
 }).then(() => {
@@ -124,6 +126,14 @@ User.remove({}).then(() => {
         photoUrl: 'https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/18556054_10103644972677661_4371251815775200258_n.jpg?oh=9c89e51a32954ff7c5b693d862d1888e&oe=5AF1E7D1'
     })
     return timTurnquist.save()
+}).then(()=>{
+    return middleEarth.save()
+}).then(()=>{
+    return wizardingWorld.save()
+}).then(()=>{
+    return sevenKingdoms.save()
+}).then(()=>{
+    return wheelOfTime.save()
 }).catch((err)=>{
     console.log('ERROR SEEDING DATA!!')
     console.log(err)

@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import User from './User'
 
-const Container = styled.data `
+const Container = styled.div `
     height: 75vh;
     width: 100vw;
     display: flex;

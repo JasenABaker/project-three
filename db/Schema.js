@@ -25,6 +25,11 @@ const WorldsSchema = new Schema (
             type: String,
             required: false,
             default: 'http://t3.gstatic.com/images?q=tbn:ANd9GcRdt-j1kozfrgvimYYVKAJfew7BDnLiaGTolktzVZFRM4Qgfc9l'
+        },
+        mapUrl: {
+            type: String,
+            required: false,
+            default: 'https://img00.deviantart.net/99b4/i/2013/005/c/9/middle_earth_map_by_kethwyn2013-d5qih1p.jpg'
         }
     },
     {
@@ -67,7 +72,7 @@ const UserSchema = new Schema (
             required: false,
             default: 'https://www.ttmf-mortgages.com/wordpress/wp-content/uploads/2014/01/happy-vacation-man.jpg'
         },
-        wordsVisited: [WorldsSchema],
+        worldsVisited: [WorldsSchema],
         locationsVisited: []
     },
     {
