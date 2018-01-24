@@ -93,7 +93,7 @@ const wheelOfTime = new World({
 
 
 User.remove({}).then(() => {
-    return Worlds.remove({})
+    return World.remove({})
 }).then(() => {
         const jasenBaker = new User({
             userName: 'Novemberist',
