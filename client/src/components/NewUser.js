@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Header from './styled-components/Header'
 import axios from 'axios'
-import { ContainerOneColumn, FormContainer } from './styled-components/Containers';
+import { ContainerOneColumn, FormContainer } from './styled-components/Containers'
+import { InputStyle, InputButton } from './styled-components/Inputs'
 import { Redirect } from 'react-router-dom'
 
 
@@ -53,7 +54,9 @@ class NewUser extends Component {
     render() {
         
         return (
-                <div>
+            <div>
+            {this.state.redirctToUsers ? <Redirect to='/Users'/> : null}
+                
                     <Header>
                         <h1>Fanta<span>See</span></h1>
                         <nav><ul>
@@ -68,12 +71,12 @@ class NewUser extends Component {
                         <div>
                             <form onSubmit={this._addNewUser}>
                                 <FormContainer>
-                                    <input name='firstName' type='text' placeholder='First Name' onChange={this.handleInputChange} />
-                                    <input name='lastName' type='text' placeholder='Last Name' onChange={this.handleInputChange} />
-                                    <input name='userName' type='text' placeholder='User Name' onChange={this.handleInputChange} />
-                                    <input name='home' type='text' placeholder='Hometown' onChange={this.handleInputChange} />
-                                    <input name='photoUrl' type='text' placeholder='Picture Url' onChange={this.handleInputChange} />
-                                    <input type='submit' value='Create New User' />
+                                    <InputStyle name='firstName' type='text' placeholder='First Name' onChange={this.handleInputChange} />
+                                    <InputStyle name='lastName' type='text' placeholder='Last Name' onChange={this.handleInputChange} />
+                                    <InputStyle name='userName' type='text' placeholder='User Name' onChange={this.handleInputChange} />
+                                    <InputStyle name='home' type='text' placeholder='Hometown' onChange={this.handleInputChange} />
+                                    <InputStyle name='photoUrl' type='text' placeholder='Picture Url' onChange={this.handleInputChange} />
+                                    <InputButton type='submit' value='Create New User' />
                                 </FormContainer>
                             </form>
                         </div>

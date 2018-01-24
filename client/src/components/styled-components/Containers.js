@@ -22,8 +22,8 @@ export const ContainerOneColumn = ContainerOne.extend`
     flex-direction: column;
 `
 export const FormContainer = styled.div`
-    height: 40vh;
-    width: 20vw;
+    height: 60vh;
+    width: 30vw;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -33,4 +33,4 @@ export const FormContainer = styled.div`
 `
 
 
-export  default { ContainerOne, ContainerTwo, ContainerOneColumn, FormContainer }
+export default { ContainerOne, ContainerTwo, ContainerOneColumn, FormContainer }
