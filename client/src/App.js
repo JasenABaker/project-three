@@ -5,6 +5,7 @@ import HomePage from './components/HomePage'
 import UserPage from './components/UserPage'
 import UserShow from './components/UserShow'
 import NewUser from './components/NewUser'
+import EditUser from './components/EditUser'
 
 
 class App extends Component {
@@ -59,6 +60,7 @@ class App extends Component {
               <Route exact path='/Users' render={userPage} />
               <Route exact path='/Users/new' render={newUserPage}/>
               <Route exact path='/Users/:userId' render={userShowPage} />
+              <Route exact path='/Users/:userId/edit' component={EditUser}/>
             </Switch>
           </div>
         </Router>

@@ -69,7 +69,9 @@ class UserShow extends Component {
                 <img src={user.photoUrl} alt={user.userName}/>
                 <h1>{user.userName}</h1>
                 <div>
-                <ButtonEdit>Edit</ButtonEdit>
+                <Link to={`/Users/${this.props.match.params.userId}/edit`} 
+                style={{textDecoration: 'none', color: 'inherit'}}>
+                <ButtonEdit>Edit</ButtonEdit></Link>
                 <ButtonDelete onClick={()=>{this.deleteUser()}}>Delete</ButtonDelete>
                 </div>
                 </Top>
