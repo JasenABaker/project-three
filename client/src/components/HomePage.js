@@ -2,7 +2,10 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import landscape from '../images/landscape.jpg'
 import Header from './styled-components/Header'
-import Splash from './styled-components/Splash'
+import {Splash, ButtonText} from './styled-components/Splash'
+import { Button } from './styled-components/Buttons'
+import styled from 'styled-components'
+
 
 
 class HomePage extends Component {
@@ -21,7 +24,15 @@ class HomePage extends Component {
                 </Header>
                 <Splash>
                     <img src={landscape} alt="landscape" />
-                    <Link to='/Users' style={{ textDecoration: 'none', color: 'inherit' }}><a>Users</a></Link>
+                    <ButtonText>
+                    <h2> Are you prepared for an adventure of a lifetime?</h2>
+                    <p> With FantaSee, the vacation of your wildest fantasies is finally within reach.
+                    Our service provides you with the once in a lifetime opportunity to visit the worlds of your favorite fantasy 
+                    novel. With our proprietary technology, we can offer dream packages to a variety of locations from popular fantasy literature.
+                    (proprietary technology coming soon)
+                    </p>
+                    <Link to='/Users' style={{ textDecoration: 'none', color: 'inherit' }}><Button>Users</Button></Link>
+                    </ButtonText>
                 </Splash>
 
             </div>

@@ -39,7 +39,7 @@ class NewUser extends Component {
 
     handleInputChange = (event) => {
         const attribute = event.target.name
-        let val = event.target.value
+        const val = event.target.value
 
         const newUser = { ...this.state.newUser }
         newUser[attribute] = val
