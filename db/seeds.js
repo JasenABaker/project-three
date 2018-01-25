@@ -59,8 +59,8 @@ const sevenKingdoms = new World({
     its numerous offshore islands, ruled by the King of the 
     Andals and the First Men from the Red Keep in the city of 
     King's Landing.`,
-    novelCover: 'https://cdn.vox-cdn.com/thumbor/w-IFN0FWpN4BGfhZaV9EYqs4nLo=/51x0:977x617/1200x800/filters:focal(51x0:977x617)/cdn.vox-cdn.com/uploads/chorus_image/image/50017015/Screen_Shot_2016-07-04_at_12.37.15_PM.0.0.png',
-    mapUrl: 'https://vignette1.wikia.nocookie.net/gameofthrones/images/7/71/Westeros_HBO.png/revision/latest?cb=20111113154717'
+    novelCover: 'https://cdn.waterstones.com/bookjackets/large/9780/0075/9780007578580.jpg',
+    mapUrl: "https://vignette1.wikia.nocookie.net/gameofthrones/images/7/71/Westeros_HBO.png/revision/latest?cb=20111113154717'https://cdn.vox-cdn.com/thumbor/w-IFN0FWpN4BGfhZaV9EYqs4nLo=/51x0:977x617/1200x800/filters:focal(51x0:977x617)/cdn.vox-cdn.com/uploads/chorus_image/image/50017015/Screen_Shot_2016-07-04_at_12.37.15_PM.0.0.png"
 })
 
 const wheelOfTime = new World({
@@ -77,13 +77,7 @@ const wheelOfTime = new World({
     the Great Blight, a hostile wilderness inhabited by evil 
     beings. The Westlands are mostly temperate; it and the Aiel 
     Waste are located in the world's northern mid-latitudes. 
-    Shara extends slightly south of the equator. Across an ocean 
-    west of the Westlands is Seanchan, the name of a landmass 
-    and the empire that spans it. Seanchan is narrower from 
-    east to west than the other landmass, but extends most 
-    of the way between the ice caps from south to north. A large 
-    island in the northwest is separated from the Seanchan mainland 
-    by a channel.`,
+    Shara extends slightly south of the equator.`,
     novelCover: 'http://1.bp.blogspot.com/-nMceHwqPU2s/TiSPsajp7aI/AAAAAAAAD5c/sfvJbho2ccc/s1600/The%2BGreat%2BHunt%2BUSA.jpg',
     mapUrl: 'http://privat.bahnhof.se/wb160542/bengt/bokfiler/Route%2000%20New%20Spring.jpg'
 })
