@@ -31,7 +31,10 @@ class EditUser extends Component {
     event.preventDefault()
     axios.patch(`/api/Users/${this.props.match.params.userId}`, this.state.user)
     .then((res)=>{
-        this.props.updateUsers(res.data)
+        const update = res.data
+        const user = this.state.user
+        //console.log('Upadated user infor', res.data)
+        this.props.updateUsers(user, update)
     
     }).catch((err)=>{
         console.log(err)

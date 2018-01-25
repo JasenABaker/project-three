@@ -6,7 +6,7 @@ import { ContainerOne } from './styled-components/Containers'
 
 
 const UserList = (props) => {
-console.log(props)
+//console.log(props)
         return(
             <ContainerOne>
                 {

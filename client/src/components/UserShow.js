@@ -34,63 +34,71 @@ const Top = styled.div`
 
 class UserShow extends Component {
     state = {
-        user:{},
-        redirectToUser: false
-    }
-    async componentWillMount () {
-        const res = await axios.get(`/api/Users/${this.props.match.params.userId}`)
-        this.setState({ user: res.data})
-    // console.log(res.data)
+        user: {},
+        redirectToUser: false,
+        stateNotSet: true
     }
 
     deleteUser = async () => {
         const res = await axios.delete(`/api/Users/${this.props.match.params.userId}`)
         const user = this.state.user
         this.props.removeUser(user)
-        this.setState({redirectToUser: true})
+        this.setState({ redirectToUser: true })
     }
+
+    componentWillMount() {
+        axios.get(`/api/Users/${this.props.match.params.userId}`)
+            .then(res => {
+                return this.setState({ user: res.data, stateNotSet: false })
+                // console.log(res.data)
+            })
+    }
+
 
     render() {
         const user = this.state.user
-        return(
-            <div>
-                {this.state.redirectToUser ? <Redirect to='/Users'/> : null}
-                <Header>
-                    <h1>Fanta<span>See</span></h1>
-                    <nav><ul>
-                    <Link to='/' style={{textDecoration: 'none', color: 'inherit'}}> <li>Home</li></Link>
-                    <Link to='/Users' style={{textDecoration: 'none', color: 'inherit'}}><li>Users</li></Link>
-                    <Link to='*' style={{textDecoration: 'none', color: 'inherit'}}><li>Worlds</li></Link>
-                    </ul>
-                    </nav>
-                </Header>
-            <ContainerTwo>
-                <Top>
-                <img src={user.photoUrl} alt={user.userName}/>
-                <h1>{user.userName}</h1>
+        return (
+        
+            this.state.stateNotSet ? <div></div>:
+
+            (
                 <div>
-                <Link to={`/Users/${this.props.match.params.userId}/edit`} 
-                style={{textDecoration: 'none', color: 'inherit'}}>
-                <ButtonEdit>Edit</ButtonEdit></Link>
-                <ButtonDelete onClick={()=>{this.deleteUser()}}>Delete</ButtonDelete>
+                    {this.state.redirectToUser ? <Redirect to='/Users' /> : null}
+                    <Header>
+                        <h1>Fanta<span>See</span></h1>
+                        <nav><ul>
+                            <Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}> <li>Home</li></Link>
+                            <Link to='/Users' style={{ textDecoration: 'none', color: 'inherit' }}><li>Users</li></Link>
+                            <Link to='*' style={{ textDecoration: 'none', color: 'inherit' }}><li>Worlds</li></Link>
+                        </ul>
+                        </nav>
+                    </Header>
+                    <ContainerTwo>
+                        <Top>
+                            <img src={user.photoUrl} alt={user.userName} />
+                            <h1>{user.userName}</h1>
+                            <div>
+                                <Link to={`/Users/${this.props.match.params.userId}/edit`}
+                                    style={{ textDecoration: 'none', color: 'inherit' }}>
+                                    <ButtonEdit>Edit</ButtonEdit></Link>
+                                <ButtonDelete onClick={() => { this.deleteUser() }}>Delete</ButtonDelete>
+                            </div>
+                        </Top>
+
+                        <h2>Places Visited</h2>
+
+                        <div>
+                            <WorldView worlds={this.state.user.worldsVisited} />
+                        </div>
+                        <div>
+                            Localsview
                 </div>
-                </Top>
-                
-                    <h2>Places Visited</h2>
-                
-                <div>
-                    <WorldView user={this.state.user}/>
+                    </ContainerTwo>
                 </div>
-                <div>
-                    Localsview
-                </div>
-            </ContainerTwo>
-            </div>
+            )
+        
         )
     }
-
-
 }
-
 
 export default UserShow

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import Worlds from './Worlds'
 
@@ -11,25 +11,23 @@ const Container = styled.div`
     flex-wrap: wrap;
 `
 
+const WorldView = (props) => {
 
-class WorldView extends Component {
-    render() {
-        console.log(this.props)
-
+    console.log(props.worlds)
         return (
             <Container>
-                {/* {{
-                this.props.user.worldsVisited.map((world) => {
-                    console.log(props.user.worldsVisited)
-                    return(
-                        <Worlds world={world} {...props} key={world._id} index={world._id}/>
-                    )
-                }) */}
-            } }
+                { 
+                    props.worlds.map((world) => {
+                        //console.log(props.user.worldsVisited)
+                        return (
+                            <Worlds world={world} {...props} key={world._id} index={world._id} />
+                        )
+                    })
+                }
+                
             </Container>
         )
 
     }
-}
 
 export default WorldView
