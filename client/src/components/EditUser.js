@@ -31,12 +31,11 @@ class EditUser extends Component {
     event.preventDefault()
     axios.patch(`/api/Users/${this.props.match.params.userId}`, this.state.user)
     .then((res)=>{
-    
+        this.props.updateUsers(res.data)
     
     }).catch((err)=>{
         console.log(err)
     })
-    this.props.updateUsers()
     this.setState({redirctToUser: true})
 
     }
@@ -70,7 +69,7 @@ class EditUser extends Component {
                                 <InputStyle name='userName' type='text' placeholder='User Name'value={user.userName} onChange={this.handleInputChange} />
                                 <InputStyle name='home' type='text' placeholder='Hometown'value={user.home} onChange={this.handleInputChange} />
                                 <InputStyle name='photoUrl' type='text' placeholder='Picture Url'value={user.photoUrl} onChange={this.handleInputChange} />
-                                <InputStyle name='numberOfTrips' type='number' placeholder='Picture Url'value={user.numberOfTrips} onChange={this.handleInputChange} />
+                                <InputStyle name='numberOfTrips' type='number' placeholder='Number of Trips'value={user.numberOfTrips} onChange={this.handleInputChange} />
                                 <InputButton type='submit' value={`Edit ${user.userName}`} />
                             </FormEdit>
                         </form>
