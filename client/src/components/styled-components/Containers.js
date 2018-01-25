@@ -32,5 +32,9 @@ export const FormContainer = styled.div`
     border: 2px solid #292F36;
 `
 
+export const FormEdit = FormContainer.extend`
+    background-color:#256EFF;
+`
 
-export default { ContainerOne, ContainerTwo, ContainerOneColumn, FormContainer }
+
+export default { ContainerOne, ContainerTwo, ContainerOneColumn, FormContainer, FormEdit }
