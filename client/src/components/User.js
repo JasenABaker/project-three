@@ -21,11 +21,12 @@ const UserCard = styled.div`
 const ImgDiv = styled.div`
     height: 200px;
     width: 200px;
+    overflow: hidden;
 
 
     img{
         height: 100%;
-        width: 100%;
+        width: auto;
         border-radius: 50%;
     }
     

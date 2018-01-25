@@ -59,7 +59,7 @@ const sevenKingdoms = new World({
     its numerous offshore islands, ruled by the King of the 
     Andals and the First Men from the Red Keep in the city of 
     King's Landing.`,
-    novelCover: 'https://cdn.waterstones.com/bookjackets/large/9780/0075/9780007578580.jpg',
+    novelCover: 'https://cdn.vox-cdn.com/thumbor/w-IFN0FWpN4BGfhZaV9EYqs4nLo=/51x0:977x617/1200x800/filters:focal(51x0:977x617)/cdn.vox-cdn.com/uploads/chorus_image/image/50017015/Screen_Shot_2016-07-04_at_12.37.15_PM.0.0.png',
     mapUrl: 'https://vignette1.wikia.nocookie.net/gameofthrones/images/7/71/Westeros_HBO.png/revision/latest?cb=20111113154717'
 })
 

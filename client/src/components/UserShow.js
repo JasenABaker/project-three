@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { Redirect } from 'react-router-dom'
 import WorldView from './WorldView'
 import Header from './styled-components/Header'
-import { ContainerTwo } from './styled-components/Containers'
+import { ContainerTwo, PageContainer } from './styled-components/Containers'
 import { ButtonDelete, ButtonEdit } from './styled-components/Buttons'
 
 
@@ -16,6 +16,7 @@ const Top = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
 
 
     img{
@@ -62,7 +63,7 @@ class UserShow extends Component {
             this.state.stateNotSet ? <div></div>:
 
             (
-                <div>
+                <PageContainer>
                     {this.state.redirectToUser ? <Redirect to='/Users' /> : null}
                     <Header>
                         <h1>Fanta<span>See</span></h1>
@@ -73,7 +74,6 @@ class UserShow extends Component {
                         </ul>
                         </nav>
                     </Header>
-                    <ContainerTwo>
                         <Top>
                             <img src={user.photoUrl} alt={user.userName} />
                             <h1>{user.userName}</h1>
@@ -85,16 +85,12 @@ class UserShow extends Component {
                             </div>
                         </Top>
 
-                        <h2>Places Visited</h2>
+                        <h2>Worlds Visited</h2>
 
-                        <div>
                             <WorldView worlds={this.state.user.worldsVisited} />
-                        </div>
-                        <div>
-                            Localsview
-                </div>
-                    </ContainerTwo>
-                </div>
+        
+            
+                </PageContainer>
             )
         
         )

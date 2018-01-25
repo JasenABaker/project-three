@@ -1,7 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
 
+
+export const PageContainer = styled.div`
+    height: 200vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+
+    h2{
+        align-self: center;
+    }
+
+`
 export const ContainerOne = styled.div`
+margin-top: 30px;
 height: 75vh;
 width: 100vw;
 display: flex;
@@ -10,7 +23,7 @@ align-items: center;
 flex-wrap: wrap;
 `
 export const ContainerTwo = styled.div`
-    height: 85vh;
+    height: 75vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -18,11 +31,19 @@ export const ContainerTwo = styled.div`
         align-self: center;
     }
 `
+export const ContainerThree = styled.div`
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+`
 export const ContainerOneColumn = ContainerOne.extend`
     flex-direction: column;
 `
 export const FormContainer = styled.div`
-    height: 60vh;
+    height: 70vh;
     width: 30vw;
     display: flex;
     flex-direction: column;
@@ -36,5 +57,39 @@ export const FormEdit = FormContainer.extend`
     background-color:#256EFF;
 `
 
+export const WorldCard = styled.div`
+height: 100%;
+width: 20%;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+border: 2px solid #292F36;
+`
 
-export default { ContainerOne, ContainerTwo, ContainerOneColumn, FormContainer, FormEdit }
+export const PicHolder = styled.div`
+    height: 45%;
+    width: 90%;
+    border: 1px solid black;
+    overflow: hidden;
+    background-color: black;
+    
+    img {
+        height: 100%;
+        width: auto;
+    }
+`
+export const BottomCard = styled.div`
+    height: 45%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p{
+        font-size: .7em;
+        width: 90%;
+    }
+`
+
+export default { PageContainer, ContainerOne, ContainerTwo, ContainerOneColumn, FormContainer, FormEdit, ContainerThree, WorldCard, PicHolder, BottomCard }

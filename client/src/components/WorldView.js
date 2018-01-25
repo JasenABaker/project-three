@@ -1,21 +1,13 @@
 import React from 'react'
-import styled from 'styled-components'
 import Worlds from './Worlds'
+import { ContainerThree } from './styled-components/Containers'
 
-const Container = styled.div`
-    height: 30vh;
-    width: 100vw;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-`
 
 const WorldView = (props) => {
 
     console.log(props.worlds)
         return (
-            <Container>
+            <ContainerThree>
                 { 
                     props.worlds.map((world) => {
                         //console.log(props.user.worldsVisited)
@@ -25,7 +17,7 @@ const WorldView = (props) => {
                     })
                 }
                 
-            </Container>
+            </ContainerThree>
         )
 
     }
