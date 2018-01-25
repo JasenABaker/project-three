@@ -35,6 +35,17 @@ router.get('/:userId', (req,res)=>{
     })
 })
 
+router.patch('/:userId', (req,res)=>{
+    const userUpdate = req.body
+    const userId = req.params.userId
+
+    User.findByIdAndUpdate(userId, userUpdate).then(user=>{
+        res.json(user)
+    }).catch((err)=>{
+        console.log(err)
+    })
+})
+
 
 router.delete('/:userId', (req,res)=>{
 
