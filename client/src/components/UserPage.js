@@ -8,7 +8,7 @@ class UserPage extends Component {
     
 
     render() {
-    //console.log(this.props)
+    console.log("Rendering User Page")
         return (
             <div>
                 <Header>

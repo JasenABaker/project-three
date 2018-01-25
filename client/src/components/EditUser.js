@@ -27,13 +27,17 @@ class EditUser extends Component {
         this.setState({ user })
     }
 
-    updateUser = () =>{
+    updateUser = (event) =>{
+    event.preventDefault()
     axios.patch(`/api/Users/${this.props.match.params.userId}`, this.state.user)
     .then((res)=>{
-        this.setState({redirctToUser: true})
+    
+    
     }).catch((err)=>{
         console.log(err)
     })
+    this.props.updateUsers()
+    this.setState({redirctToUser: true})
 
     }
 
@@ -42,9 +46,10 @@ class EditUser extends Component {
 
     render(){
         const user = this.state.user
+        console.log(user._id)
         return (
             <div>
-                {this.state.redirctToUser ? <Redirect to={`/Users/${user._Id}`}/> : null}
+                {this.state.redirctToUser ? <Redirect to={`/Users/${this.props.match.params.userId}`}/> : null}
                 
                 <Header>
                     <h1>Fanta<span>See</span></h1>
@@ -58,7 +63,7 @@ class EditUser extends Component {
                 <ContainerOneColumn>
                     <h1>Edit {user.userName}</h1>
                     <div>
-                        <form onSubmit={this._addNewUser}>
+                        <form onSubmit={this.updateUser}>
                             <FormEdit>
                                 <InputStyle name='firstName' type='text' placeholder='First Name'value={user.firstName} onChange={this.handleInputChange} />
                                 <InputStyle name='lastName' type='text' placeholder='Last Name' value={user.lastName}onChange={this.handleInputChange} />

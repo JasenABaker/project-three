@@ -32,6 +32,11 @@ class App extends Component {
     this.setState({users})
   }
 
+  updateUsers = () => {
+    const users = [...this.state.users]
+    this.setState({users})
+  }
+
 
   render() {
     const userPage = () => {
@@ -52,6 +57,14 @@ class App extends Component {
         removeUser={this.removeUser}/>
       )
     }
+
+    const editUserPage = (props) =>{
+      return(
+        <EditUser {...props}
+          updateUsers={this.updateUsers}/>
+      )
+    }
+
       return (
         <Router>
           <div>
@@ -60,7 +73,7 @@ class App extends Component {
               <Route exact path='/Users' render={userPage} />
               <Route exact path='/Users/new' render={newUserPage}/>
               <Route exact path='/Users/:userId' render={userShowPage} />
-              <Route exact path='/Users/:userId/edit' component={EditUser}/>
+              <Route exact path='/Users/:userId/edit' render={editUserPage}/>
             </Switch>
           </div>
         </Router>

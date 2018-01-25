@@ -18,7 +18,8 @@ router.post('/', (req,res)=> {
     const data = req.body
     console.log("Received New User:", data)
     const newUser = User.create(data)
-    newUser.save().then((user)=>{
+    .then((user)=>{
+        console.log("New User:", user)
         res.json(user)
     }).catch((err)=>{
         console.error(err)

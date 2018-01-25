@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 import Worlds from './Worlds'
 
@@ -12,22 +12,24 @@ const Container = styled.div`
 `
 
 
-const WorldView = (props) => {
-console.log(props)
-    return (
-        <Container>
-            {
-                // props.user.worldsVisited.map((world) => {
-                //     console.log(props.user.worldsVisited)
-                //     return(
-                //         <Worlds world={world} {...props} key={world._id} index={world._id}/>
-                //     )
-                // })
-            }
-        </Container>
-    )
+class WorldView extends Component {
+    render() {
+        console.log(this.props)
 
+        return (
+            <Container>
+                {/* {{
+                this.props.user.worldsVisited.map((world) => {
+                    console.log(props.user.worldsVisited)
+                    return(
+                        <Worlds world={world} {...props} key={world._id} index={world._id}/>
+                    )
+                }) */}
+            } }
+            </Container>
+        )
 
+    }
 }
 
 export default WorldView

@@ -26,8 +26,15 @@ class NewUser extends Component {
         console.log("Calling API with payload:", this.state.newUser)
         axios.post('/api/Users', this.state.newUser)
         .then((res) => {
-            return this.resetForm()
+            // console.log("New User ID from add:", res.data._id)
+            const updatedNewUser = {...this.state.newUser}
+            updatedNewUser._id = res.data._id
+            //console.log("Newestestest User Info:", updatedNewUser)
+            this.props.addNewUser(updatedNewUser)
+        }).catch((err)=>{
+            console.log(err)
         })
+        
     }
 
     handleInputChange = (event) => {
@@ -39,14 +46,10 @@ class NewUser extends Component {
 
         this.setState({ newUser })
     }
-    resetForm = () => {
-        const newUser = { ...this.state.newUser }
-        this.setState({ newUser })
-    }
+
     _addNewUser = (event) => {
         event.preventDefault()
-        console.log("ADDING USER:", this.state.newUser)
-        this.props.addNewUser(this.state.newUser)
+        // console.log("ADDING USER:", this.state.newUser)
         this.newUserPost()
         this.setState({redirctToUsers: true})
     }
