@@ -18,7 +18,7 @@ class HomePage extends Component {
                     <nav><ul>
                         <li>Home</li>
                         <Link to='/Users/new' style={{textDecoration: 'none', color: 'inherit'}}><li>New User</li></Link>
-                        <li>Worlds</li>
+                        <Link to='/Worlds' style={{textDecoration: 'none', color: 'inherit'}}><li>Worlds</li></Link>
                     </ul>
                     </nav>
                 </Header>

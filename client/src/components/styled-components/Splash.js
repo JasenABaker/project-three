@@ -8,6 +8,7 @@ export const Splash = styled.div `
     position: relative;
     display: flex;
     justify-content: center;
+    overflow: hidden;
 
     img{
         height: 100%;
@@ -39,5 +40,21 @@ export const ButtonText = styled.div`
         padding: 5px;
     }
 `
+export const WorldSplash = Splash.extend`
+    height: 40vh;
 
-export default {Splash, ButtonText}
+        img{
+            height: auto;
+            width: auto;
+            transform: translateY(-20em)
+        }
+        h2{
+            align-self: center;
+            position: absolute;
+            z-index: 1;
+            font-size: 2.5em;
+            color: #EFE9E7;
+        }
+`
+
+export default {Splash, ButtonText, WorldSplash}
