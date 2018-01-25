@@ -6,7 +6,7 @@ import { Redirect } from 'react-router-dom'
 import WorldView from './WorldView'
 import Header from './styled-components/Header'
 import { ContainerTwo } from './styled-components/Containers'
-import { ButtonDelete } from './styled-components/Buttons'
+import { ButtonDelete, ButtonEdit } from './styled-components/Buttons'
 
 
 
@@ -68,7 +68,10 @@ class UserShow extends Component {
                 <Top>
                 <img src={user.photoUrl} alt={user.userName}/>
                 <h1>{user.userName}</h1>
+                <div>
+                <ButtonEdit>Edit</ButtonEdit>
                 <ButtonDelete onClick={()=>{this.deleteUser()}}>Delete</ButtonDelete>
+                </div>
                 </Top>
                 
                     <h2>Places Visited</h2>
