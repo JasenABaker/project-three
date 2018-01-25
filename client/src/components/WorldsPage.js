@@ -22,9 +22,10 @@ class WorldsPage extends Component {
                     <h2>Popular Worlds</h2>
                     <img src={Winterfell} alt="Winterfall" />
                 </WorldSplash>
-                
-                    <WorldsList />
-                
+                <div>
+                    <WorldsList worlds={this.props.worlds}/>
+                    
+                </div>
             </PageContainer>
         )
     }
