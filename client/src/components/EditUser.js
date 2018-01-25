@@ -58,7 +58,7 @@ class EditUser extends Component {
                     <nav><ul>
                         <Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}><li>Home</li></Link>
                         <Link to='/Users' style={{ textDecoration: 'none', color: 'inherit' }}><li>Users</li></Link>
-                        <li>Worlds</li>
+                        <Link to='/Worlds' style={{textDecoration: 'none', color: 'inherit'}}><li>Worlds</li></Link>
                     </ul>
                     </nav>
                 </Header>

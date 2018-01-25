@@ -16,7 +16,7 @@ class UserPage extends Component {
                     <nav><ul>
                     <Link to='/Users/new' style={{textDecoration: 'none', color: 'inherit'}}><li>New User</li></Link>
                     <Link to='/' style={{textDecoration: 'none', color: 'inherit'}}><li>Home</li></Link>
-                        <li>Worlds</li>
+                    <Link to='/Worlds' style={{textDecoration: 'none', color: 'inherit'}}><li>Worlds</li></Link>
                     </ul>
                     </nav>
                 </Header>

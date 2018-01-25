@@ -11,7 +11,8 @@ import WorldsPage from './components/WorldsPage'
 
 class App extends Component {
   state = {
-    users: []
+    users: [],
+    worlds: []
   }
   async componentWillMount() {
     const response = await axios.get('/api/Users')

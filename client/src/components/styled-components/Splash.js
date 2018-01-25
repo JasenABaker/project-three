@@ -11,8 +11,8 @@ export const Splash = styled.div `
     overflow: hidden;
 
     img{
-        height: 100%;
-        width: 100%;
+        height: auto;
+        width: auto;
         position: absolute;
     }
     
