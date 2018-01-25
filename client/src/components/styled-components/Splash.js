@@ -28,14 +28,13 @@ export const ButtonText = styled.div`
     width: 100vw;
 
     h2{
-        color:#EFE9E7;
+        color:#DAD4D2;
     }
 
     p{
         color: #E4572E;
         font-size: 16px;
         width: 50%;
-        border: 1px solid #EFE9E7; 
         background-color: rgba(41,47,54,.8);
         padding: 5px;
     }
