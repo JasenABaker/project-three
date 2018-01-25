@@ -36,5 +36,17 @@ router.get('/:userId', (req,res)=>{
 })
 
 
+router.delete('/:userId', (req,res)=>{
+
+    User.findByIdAndRemove(req.params.userId)
+    .then(()=>{
+        res.sendStatus(200)
+    }).catch((err)=>{
+        console.log(err)
+    })
+
+})
+
+
 
 module.exports = router

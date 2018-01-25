@@ -16,16 +16,18 @@ class App extends Component {
     this.setState({ users: response.data })
     //console.log(response.data)
   }
-  // newUserPost = async () => {
-  //   const response = await axios.post('/api/Users', this.state.newUser)
-  //   const newUser = response.data
-  //   const newUsers = [...this.state.users]
-  //   this.setState({ users: newUsers })
-  // }
+  
 
   addNewUser = (newUser) =>{
     const users = [...this.state.users]
     users.push(newUser)
+    this.setState({users})
+  }
+
+  removeUser = (user) =>{
+    const userToRemove = this.state.users.indexOf(user)
+    const users = [...this.state.users]
+    users.splice(userToRemove, 1)
     this.setState({users})
   }
 
@@ -41,7 +43,13 @@ class App extends Component {
       return(
         <NewUser addNewUser={this.addNewUser}/>
       )
+    }
 
+    const userShowPage = (props) => {
+      return (
+        <UserShow {...props}
+        removeUser={this.removeUser}/>
+      )
     }
       return (
         <Router>
@@ -50,7 +58,7 @@ class App extends Component {
               <Route exact path='/' component={HomePage} />
               <Route exact path='/Users' render={userPage} />
               <Route exact path='/Users/new' render={newUserPage}/>
-              <Route exact path='/Users/:userId' component={UserShow} />
+              <Route exact path='/Users/:userId' render={userShowPage} />
             </Switch>
           </div>
         </Router>

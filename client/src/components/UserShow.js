@@ -45,6 +45,8 @@ class UserShow extends Component {
 
     deleteUser = async () => {
         const res = await axios.delete(`/api/Users/${this.props.match.params.userId}`)
+        const user = this.state.user
+        this.props.removeUser(user)
         this.setState({redirectToUser: true})
     }
 
@@ -66,7 +68,7 @@ class UserShow extends Component {
                 <Top>
                 <img src={user.photoUrl} alt={user.userName}/>
                 <h1>{user.userName}</h1>
-                <ButtonDelete>Delete</ButtonDelete>
+                <ButtonDelete onClick={()=>{this.deleteUser()}}>Delete</ButtonDelete>
                 </Top>
                 
                     <h2>Places Visited</h2>
