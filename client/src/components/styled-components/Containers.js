@@ -22,6 +22,9 @@ justify-content: space-around;
 align-items: center;
 flex-wrap: wrap;
 `
+export const ContainerOneSmall = ContainerOne.extend`
+    height: 55vh;
+`
 export const ContainerTwo = styled.div`
     height: 75vh;
     width: 100vw;
