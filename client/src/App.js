@@ -19,6 +19,10 @@ class App extends Component {
     this.setState({ users: response.data })
     //console.log(response.data)
   }
+  async componentWillMount() {
+    const res = await axios.get('/api/Worlds')
+    this.setState({worlds: res.data})
+  }
   
 
   addNewUser = (newUser) =>{
@@ -69,6 +73,12 @@ class App extends Component {
       )
     }
 
+    const worldPage = () =>{
+      return(
+        <WorldsPage worlds={this.state.worlds} />
+      )
+    }
+
       return (
         <Router>
           <div>
@@ -78,7 +88,7 @@ class App extends Component {
               <Route exact path='/Users/new' render={newUserPage}/>
               <Route exact path='/Users/:userId' render={userShowPage} />
               <Route exact path='/Users/:userId/edit' render={editUserPage}/>
-              <Route exact path='/Worlds' component={WorldsPage} />
+              <Route exact path='/Worlds' render={worldPage} />
             </Switch>
           </div>
         </Router>
