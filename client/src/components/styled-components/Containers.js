@@ -23,7 +23,7 @@ align-items: center;
 flex-wrap: wrap;
 `
 export const ContainerOneSmall = ContainerOne.extend`
-    height: 55vh;
+    height: 100vh;
 `
 export const ContainerTwo = styled.div`
     height: 75vh;
@@ -94,5 +94,47 @@ export const BottomCard = styled.div`
         width: 90%;
     }
 `
+export const BottomBottomCard = BottomCard.extend`
+    height: 40%;
+    width: 90%;
+    border: 1px solid black;
 
-export default { PageContainer, ContainerOne, ContainerTwo, ContainerOneColumn, FormContainer, FormEdit, ContainerThree, WorldCard, PicHolder, BottomCard }
+    span {
+        color:#FF6B6B;
+        font-size: 14px;
+    }
+    p{
+        align-self: center;
+    }
+`
+
+export const WorldCardBig = WorldCard.extend`
+    height: 100%;
+    width: 25vw;
+    margin-bottom: 30px;
+    border: .5px soild #292F36;
+
+`
+export const PicHolderTwo = PicHolder.extend`
+        width: 70%;
+        border: none;
+`
+export const PicHolderThree = PicHolder.extend`
+        height: 80%;
+        width: 20%;
+`
+
+export default { PageContainer, 
+                ContainerOne, 
+                ContainerTwo, 
+                ContainerOneColumn, 
+                FormContainer, 
+                FormEdit, 
+                ContainerThree, 
+                WorldCard, 
+                PicHolder, 
+                BottomCard, 
+                WorldCardBig,
+                PicHolderTwo,
+                PicHolderThree,
+                BottomBottomCard }

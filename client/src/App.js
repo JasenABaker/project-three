@@ -16,14 +16,12 @@ class App extends Component {
   }
   async componentWillMount() {
     const response = await axios.get('/api/Users')
-    this.setState({ users: response.data })
-    //console.log(response.data)
-  }
-  async componentWillMount() {
     const res = await axios.get('/api/Worlds')
     this.setState({worlds: res.data})
+    this.setState({ users: response.data })
+    console.log(`User info =${response.data}`)
   }
-  
+
 
   addNewUser = (newUser) =>{
     const users = [...this.state.users]
@@ -35,13 +33,16 @@ class App extends Component {
     const userToRemove = this.state.users.indexOf(user)
     const users = [...this.state.users]
     users.splice(userToRemove, 1)
+    this.componentWillMount()
     this.setState({users})
   }
 
   updateUsers = (user, updateUsers) => {
     const userToUpdate = this.state.users.indexOf(user)
+    console.log(user)
     const users = [...this.state.users]
-    users[userToUpdate] = updateUsers
+    users.splice(userToUpdate, 1, user)
+    this.componentWillMount()
     this.setState({users})
   }
 

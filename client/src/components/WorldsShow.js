@@ -1,5 +1,5 @@
 import React from 'react'
-import { WorldCard, PicHolder, BottomCard } from './styled-components/Containers'
+import { WorldCardBig, PicHolderTwo, BottomCard, BottomBottomCard, PicHolderThree } from './styled-components/Containers'
 
 
 const WorldsShow = (props) => {
@@ -7,15 +7,23 @@ const WorldsShow = (props) => {
     const world = props.world
     return (
 
-        <WorldCard>
-            <PicHolder>
+        <WorldCardBig>
+            <PicHolderTwo>
                 <img src={world.mapUrl} alt={world.worldName} />
-            </PicHolder>
+            </PicHolderTwo>
             <BottomCard>
                 <h2>{world.worldName}</h2>
+                <BottomBottomCard>
+                <PicHolderThree>
+                <img src={world.novelCover} alt={world.seriesFrom} />
+                </PicHolderThree>
+                <div>
+                <p><span>From:</span> {world.seriesFrom}</p>
+                </div>
+                </BottomBottomCard>
                 <p>{world.description}</p>
             </BottomCard>
-        </WorldCard>
+        </WorldCardBig>
 
     )
 }
