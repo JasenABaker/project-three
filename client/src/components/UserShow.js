@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { Redirect } from 'react-router-dom'
 import WorldView from './WorldView'
 import Header from './styled-components/Header'
-import { ContainerTwo, PageContainer } from './styled-components/Containers'
+import { PageContainer } from './styled-components/Containers'
 import { ButtonDelete, ButtonEdit } from './styled-components/Buttons'
 
 

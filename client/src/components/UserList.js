@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import User from './User'
 import { ContainerOne } from './styled-components/Containers'
 

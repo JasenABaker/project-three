@@ -19,7 +19,7 @@ class App extends Component {
     const res = await axios.get('/api/Worlds')
     this.setState({worlds: res.data})
     this.setState({ users: response.data })
-    console.log(`User info =${response.data}`)
+   // console.log(`User info =${response.data}`)
   }
 
 

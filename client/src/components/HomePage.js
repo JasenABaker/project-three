@@ -4,7 +4,6 @@ import landscape from '../images/landscape.jpg'
 import Header from './styled-components/Header'
 import {Splash, ButtonText} from './styled-components/Splash'
 import { Button } from './styled-components/Buttons'
-import styled from 'styled-components'
 
 
 

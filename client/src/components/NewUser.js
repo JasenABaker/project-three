@@ -22,8 +22,7 @@ class NewUser extends Component {
     }
 
     newUserPost = () => {
-        const payload = this.state.newUser
-        console.log("Calling API with payload:", this.state.newUser)
+        //console.log("Calling API with payload:", this.state.newUser)
         axios.post('/api/Users', this.state.newUser)
         .then((res) => {
             // console.log("New User ID from add:", res.data._id)
