@@ -33,6 +33,14 @@ export const ContainerTwo = styled.div`
         align-self: center;
     }
 `
+export const ContainerTwoSmall = ContainerTwo.extend`
+    height: 10vh;
+    width: 20vw;
+    align-self: center;
+    text-align: center;
+    font-size: 14px;
+
+`
 export const ContainerThree = styled.div`
     height: 80vh;
     width: 100vw;
@@ -126,6 +134,7 @@ export const PicHolderThree = PicHolder.extend`
 export default { PageContainer, 
                 ContainerOne, 
                 ContainerTwo, 
+                ContainerTwoSmall,
                 ContainerOneColumn, 
                 FormContainer, 
                 FormEdit, 

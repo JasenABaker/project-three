@@ -50,7 +50,7 @@ class UserShow extends Component {
     componentWillMount() {
         axios.get(`/api/Users/${this.props.match.params.userId}`)
             .then(res => {
-                return this.setState({ user: res.data, stateNotSet: false })
+             this.setState({ user: res.data, stateNotSet: false })
                 // console.log(res.data)
             })
     }

@@ -56,5 +56,34 @@ export const WorldSplash = Splash.extend`
             color: #EFE9E7;
         }
 `
+export const HeaderTwo = styled.header `
+    height: 15vh;
+    width: 100vw;
+    background-color: #292F36;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 4px solid #D81E5B;
+    h1{
+        margin: 10px 0px 10px 20px;
+        font-family: 'Risque', cursive;
+        font-size: 5em;
+        color: #EFE9E7;
+    }
+    nav{
+        margin-right: 20px;
+        align-self: flex-end;
+        height: 40%;
+        width: 30%;
 
-export default {Splash, ButtonText, WorldSplash}
+    }
+    ul{
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        color:#EFE9E7;
+        font-size: 24px;
+    }
+    
+`
+
+export default {Splash, ButtonText, WorldSplash, HeaderTwo}
