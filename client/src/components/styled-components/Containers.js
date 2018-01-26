@@ -34,15 +34,17 @@ export const ContainerTwo = styled.div`
     }
 `
 export const ContainerTwoSmall = ContainerTwo.extend`
+    margin-top: 20px;
     height: 10vh;
     width: 20vw;
     align-self: center;
     text-align: center;
     font-size: 14px;
 
+
 `
 export const ContainerThree = styled.div`
-    height: 80vh;
+    height: 70vh;
     width: 100vw;
     display: flex;
     justify-content: space-around;
@@ -96,6 +98,17 @@ export const BottomCard = styled.div`
     flex-direction: column;
     align-items: center;
 
+    h2{
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+    }
+    h3 {
+        font-size: .9em;
+    }
+    span{
+        color: #D81E5B;
+    }
+
     p{
         font-size: .7em;
         width: 90%;
@@ -116,15 +129,16 @@ export const BottomBottomCard = BottomCard.extend`
 `
 
 export const WorldCardBig = WorldCard.extend`
-    height: 100%;
-    width: 25vw;
+    height: 70vh;
+    width: 35vw;
     margin-bottom: 30px;
     border: .5px soild #292F36;
 
 `
 export const PicHolderTwo = PicHolder.extend`
-        width: 70%;
-        border: none;
+    margin-top: 10px;
+    width: 60%;
+    border: none;
 `
 export const PicHolderThree = PicHolder.extend`
         height: 80%;

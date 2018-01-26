@@ -19,5 +19,8 @@ export const ButtonDelete = Button.extend`
 export const ButtonEdit = Button.extend`
     background-color:#46237A;
 `
+export const ButtonLink = Button.extend`
+    background-color:#23395B;
+`
 
-export default { Button, ButtonDelete, ButtonEdit }
+export default { Button, ButtonDelete, ButtonEdit, ButtonLink }
