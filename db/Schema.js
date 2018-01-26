@@ -67,6 +67,11 @@ const UserSchema = new Schema (
             default: 'The real world',
             unique: false
         },
+        testimonial:{
+            type: String,
+            required: false,
+            default: `This was the best trip of my life`
+        },
         numberOfTrips: {
             type: Number,
             required: false,

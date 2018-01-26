@@ -37,7 +37,7 @@ class App extends Component {
     this.setState({users})
   }
 
-  updateUsers = (user, updateUsers) => {
+  updateUsers = (user) => {
     const userToUpdate = this.state.users.indexOf(user)
     console.log(user)
     const users = [...this.state.users]

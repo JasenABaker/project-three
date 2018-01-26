@@ -125,6 +125,7 @@ User.remove({}).then(() => {
             firstName: 'Jasen',
             lastName: 'Baker',
             home: 'Georgia, USA',
+            testimonial:'I had so much fun visited the worlds of my imagination. Nearly died in The Seven Kingdoms though!',
             numberOfTrips: 4,
             photoUrl: 'https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/19224992_10154389810307127_8105888593912301500_n.jpg?oh=829d164640ef2a2856129691823d2f39&oe=5AE15440'
         })
@@ -137,6 +138,7 @@ User.remove({}).then(() => {
             firstName: 'Ninti',
             lastName: 'Chance',
             home: 'Georgia, USA',
+            testimonial: 'OMG! The Wizarding World was the best! I totally bought a cute little owl to deliver my mail.',
             numberOfTrips: 3,
             photoUrl: "https://media-exp2.licdn.com/media/AAMAAQDGAAwAAQAAAAAAAA6-AAAAJGU2Yjk2OGQ5LWEyZTMtNGUwOS05NTMxLWUyMDlkYTM0MDliMg.jpg"
         })
@@ -148,6 +150,7 @@ User.remove({}).then(() => {
             firstName: 'Tim',
             lastName: 'Turnquist',
             home: 'Georgia, USA',
+            testimonial:'Naaaarg!',
             numberOfTrips: 5,
             photoUrl: 'https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/18556054_10103644972677661_4371251815775200258_n.jpg?oh=9c89e51a32954ff7c5b693d862d1888e&oe=5AF1E7D1'
         })
