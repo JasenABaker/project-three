@@ -10,6 +10,7 @@ height: 50px;
         font-size: 24px;
         font-weight: 700;
         color: #EFE9E7;
+        border: none;
 
 `
 export const ButtonDelete = Button.extend`
@@ -22,5 +23,15 @@ export const ButtonEdit = Button.extend`
 export const ButtonLink = Button.extend`
     background-color:#23395B;
 `
+export const ButtonFooterOne = Button.extend`
+    background-color:#EFE9E7;
+    color:#D81E5B;
 
-export default { Button, ButtonDelete, ButtonEdit, ButtonLink }
+`
+export const ButtonFooterTwo = Button.extend`
+    background-color:#D81E5B;
+    color:#EFE9E7;
+    border: 1px solid #EFE9E7;
+`
+
+export default { Button, ButtonDelete, ButtonEdit, ButtonLink, ButtonFooterOne, ButtonFooterTwo }
