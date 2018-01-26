@@ -7,6 +7,7 @@ import WorldView from './WorldView'
 import Header from './styled-components/Header'
 import { PageContainer } from './styled-components/Containers'
 import { ButtonDelete, ButtonEdit } from './styled-components/Buttons'
+import { Home, World, User } from './styled-components/Icon'
 
 
 
@@ -79,9 +80,9 @@ class UserShow extends Component {
                         <Header>
                             <h1>Fanta<span>See</span></h1>
                             <nav><ul>
-                                <Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}> <li>Home</li></Link>
-                                <Link to='/Users' style={{ textDecoration: 'none', color: 'inherit' }}><li>Users</li></Link>
-                                <Link to='/Worlds' style={{ textDecoration: 'none', color: 'inherit' }}><li>Worlds</li></Link>
+                                <Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}><li><Home /></li></Link>
+                                <Link to='/Users' style={{ textDecoration: 'none', color: 'inherit' }}><li><User /></li></Link>
+                                <Link to='/Worlds' style={{ textDecoration: 'none', color: 'inherit' }}><li><World /></li></Link>
                             </ul>
                             </nav>
                         </Header>

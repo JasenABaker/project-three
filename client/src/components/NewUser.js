@@ -5,6 +5,7 @@ import axios from 'axios'
 import { ContainerOneColumn, FormContainer } from './styled-components/Containers'
 import { InputStyle, InputButton } from './styled-components/Inputs'
 import { Redirect } from 'react-router-dom'
+import { Home, World, User } from './styled-components/Icon'
 
 
 
@@ -62,9 +63,9 @@ class NewUser extends Component {
                     <Header>
                         <h1>Fanta<span>See</span></h1>
                         <nav><ul>
-                            <Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}><li>Home</li></Link>
-                            <Link to='/Users' style={{ textDecoration: 'none', color: 'inherit' }}><li>Users</li></Link>
-                            <Link to='/Worlds' style={{textDecoration: 'none', color: 'inherit'}}><li>Worlds</li></Link>
+                            <Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}><li><Home/></li></Link>
+                            <Link to='/Users' style={{ textDecoration: 'none', color: 'inherit' }}><li><User/></li></Link>
+                            <Link to='/Worlds' style={{textDecoration: 'none', color: 'inherit'}}><li><World/></li></Link>
                         </ul>
                         </nav>
                     </Header>
