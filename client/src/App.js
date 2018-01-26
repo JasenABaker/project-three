@@ -39,7 +39,7 @@ class App extends Component {
 
   updateUsers = (user) => {
     const userToUpdate = this.state.users.indexOf(user)
-    console.log(user)
+    //console.log(user)
     const users = [...this.state.users]
     users.splice(userToUpdate, 1, user)
     this.componentWillMount()

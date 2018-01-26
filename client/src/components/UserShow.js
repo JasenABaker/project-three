@@ -25,11 +25,22 @@ const Top = styled.div`
         width: 300px;
         border-radius: 50%;
     }
+`
+const Head = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     h1 {
         font-size: 3em;
         font-family: 'Risque', cursive;
         align-self: center;
-        
+        }
+
+    h2 {
+        font-size: .99em;
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
     }
 `
 
@@ -50,7 +61,7 @@ class UserShow extends Component {
     componentWillMount() {
         axios.get(`/api/Users/${this.props.match.params.userId}`)
             .then(res => {
-             this.setState({ user: res.data, stateNotSet: false })
+                this.setState({ user: res.data, stateNotSet: false })
                 // console.log(res.data)
             })
     }
@@ -59,24 +70,27 @@ class UserShow extends Component {
     render() {
         const user = this.state.user
         return (
-        
-            this.state.stateNotSet ? <div></div>:
 
-            (
-                <PageContainer>
-                    {this.state.redirectToUser ? <Redirect to='/Users' /> : null}
-                    <Header>
-                        <h1>Fanta<span>See</span></h1>
-                        <nav><ul>
-                            <Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}> <li>Home</li></Link>
-                            <Link to='/Users' style={{ textDecoration: 'none', color: 'inherit' }}><li>Users</li></Link>
-                            <Link to='/Worlds' style={{textDecoration: 'none', color: 'inherit'}}><li>Worlds</li></Link>
-                        </ul>
-                        </nav>
-                    </Header>
+            this.state.stateNotSet ? <div></div> :
+
+                (
+                    <PageContainer>
+                        {this.state.redirectToUser ? <Redirect to='/Users' /> : null}
+                        <Header>
+                            <h1>Fanta<span>See</span></h1>
+                            <nav><ul>
+                                <Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}> <li>Home</li></Link>
+                                <Link to='/Users' style={{ textDecoration: 'none', color: 'inherit' }}><li>Users</li></Link>
+                                <Link to='/Worlds' style={{ textDecoration: 'none', color: 'inherit' }}><li>Worlds</li></Link>
+                            </ul>
+                            </nav>
+                        </Header>
                         <Top>
                             <img src={user.photoUrl} alt={user.userName} />
+                            <Head>
                             <h1>{user.userName}</h1>
+                            <h2>{user.testimonial}</h2>
+                            </Head>
                             <div>
                                 <Link to={`/Users/${this.props.match.params.userId}/edit`}
                                     style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -87,12 +101,12 @@ class UserShow extends Component {
 
                         <h2>Worlds Visited</h2>
 
-                            <WorldView worlds={this.state.user.worldsVisited} />
-        
-            
-                </PageContainer>
-            )
-        
+                        <WorldView worlds={this.state.user.worldsVisited} />
+
+
+                    </PageContainer>
+                )
+
         )
     }
 }

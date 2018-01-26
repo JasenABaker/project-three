@@ -72,6 +72,7 @@ class EditUser extends Component {
                                 <InputStyle name='userName' type='text' placeholder='User Name'value={user.userName} onChange={this.handleInputChange} />
                                 <InputStyle name='home' type='text' placeholder='Hometown'value={user.home} onChange={this.handleInputChange} />
                                 <InputStyle name='photoUrl' type='text' placeholder='Picture Url'value={user.photoUrl} onChange={this.handleInputChange} />
+                                <InputStyle name='testimonial' type='text' placeholder='Testimonial'value={user.testimonial} onChange={this.handleInputChange} />
                                 <InputStyle name='numberOfTrips' type='number' placeholder='Number of Trips'value={user.numberOfTrips} onChange={this.handleInputChange} />
                                 <InputButton type='submit' value={`Edit ${user.userName}`} />
                             </FormEdit>
