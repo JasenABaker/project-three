@@ -4,6 +4,7 @@ import landscape from '../images/landscape.jpg'
 import Header from './styled-components/Header'
 import {Splash, ButtonText} from './styled-components/Splash'
 import { Button } from './styled-components/Buttons'
+import {Home, World, Plus} from './styled-components/Icon'
 
 
 
@@ -15,9 +16,9 @@ class HomePage extends Component {
                 <Header>
                     <h1>Fanta<span>See</span></h1>
                     <nav><ul>
-                        <li>Home</li>
-                        <Link to='/Users/new' style={{textDecoration: 'none', color: 'inherit'}}><li>New User</li></Link>
-                        <Link to='/Worlds' style={{textDecoration: 'none', color: 'inherit'}}><li>Worlds</li></Link>
+                    <Link to='/' style={{textDecoration: 'none', color: 'inherit'}}><li><Home />Home</li></Link>
+                        <Link to='/Users/new' style={{textDecoration: 'none', color: 'inherit'}}><li><Plus />New User</li></Link>
+                        <Link to='/Worlds' style={{textDecoration: 'none', color: 'inherit'}}><li><World />Worlds</li></Link>
                     </ul>
                     </nav>
                 </Header>
