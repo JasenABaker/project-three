@@ -29,6 +29,14 @@ const middleEarth = new World({
     the story of Arda takes place, and it was where the Children of 
     Ilúvatar; the Elves and Men, along with the Dwarves, came into
     being.`,
+    tripAbout:`Do you enjoy quaint country villages where the 
+    inhabitants are laid back, kindly, and perfectly content to 
+    smoke a pipe on their porches? Or ride majestic horses on an 
+    open expanse? Or maybe travel into dark desolate barren 
+    landscapes where evil lurks at its heart? Then Middle-earth is 
+    for you! Journey to the peaceful Shire and share a pipe with the 
+    hobbits. Ride with the Rohirrim on the plains of Rohan. Or 
+    travel deep into the pit of Mordor and spit in Sauron's eye. `,
     novelCover: 'https://images-na.ssl-images-amazon.com/images/I/51tW-UJVfHL._SX321_BO1,204,203,200_.jpg',
     mapUrl: 'https://img00.deviantart.net/99b4/i/2013/005/c/9/middle_earth_map_by_kethwyn2013-d5qih1p.jpg'
 })
@@ -47,6 +55,14 @@ const wizardingWorld = new World({
     territory, such as a Ministry of Magic or a Council of Magic. 
     The International Confederation of Wizards serves as a wizarding 
     intergovernmental organisation.`,
+    tripAbout:`Inhabiting our world, the Wizarding World shares 
+    much in common with the things we find familiar. But there are 
+    still wonders to behold hidden just out of sight. A magical 
+    castle for students to learn the art of witchcraft,  a village 
+    where all the inhabitants practice the arcane, down to a side 
+    street in the heart of London where one can find all their 
+    magical needs, The Wizarding World is right up your alley if 
+    you want a little magic added to the mundane.`,
     novelCover: 'https://typeset-beta.imgix.net/lovelace/uploads/491/4ff201f0-84b1-0133-9fd7-0e7c926a42af.png',
     mapUrl: 'http://img.auctiva.com/imgdata/1/4/4/1/6/8/2/webimg/459583018_o.jpg'
 })
@@ -59,6 +75,15 @@ const sevenKingdoms = new World({
     its numerous offshore islands, ruled by the King of the 
     Andals and the First Men from the Red Keep in the city of 
     King's Landing.`,
+    tripAbout:` Maybe safety isn't your highest concern. You don't want to go to these places 
+    where everyone treats you with kindness and respect. Maybe you 
+    want to catch a disease that slowly turns your skin to stone 
+    and your mind into mush. Maybe running from people who want 
+    nothing more than to see your head on a spike is appealing to you. 
+    Or freezing you wee parts off while roaming a giant ice wall while 
+    bloodthirsty ice zombies plot your destruction sounds like fun. 
+    You are absolutely insane. We are not responsible for your safety. 
+    Travel to the Seven Kingdoms. It's gonna suck.`,
     novelCover: 'https://cdn.waterstones.com/bookjackets/large/9780/0075/9780007578580.jpg',
     mapUrl: "https://cdn.vox-cdn.com/thumbor/w-IFN0FWpN4BGfhZaV9EYqs4nLo=/51x0:977x617/1200x800/filters:focal(51x0:977x617)/cdn.vox-cdn.com/uploads/chorus_image/image/50017015/Screen_Shot_2016-07-04_at_12.37.15_PM.0.0.png"
 })
@@ -78,6 +103,12 @@ const wheelOfTime = new World({
     beings. The Westlands are mostly temperate; it and the Aiel 
     Waste are located in the world's northern mid-latitudes. 
     Shara extends slightly south of the equator.`,
+    tripAbout:`There are neither beginnings or endings in the world 
+    of the Wheel of Time. But this trip can be A beginning. Travel 
+    to powerful countries or city-states where the cultures vary 
+    from place to place. Roam the Wastes with the enigmatic Aiel 
+    and learn the ways of ji'e'toh.  Or hold court with the Empress 
+    of the Crystal Throne.`,
     novelCover: 'http://1.bp.blogspot.com/-nMceHwqPU2s/TiSPsajp7aI/AAAAAAAAD5c/sfvJbho2ccc/s1600/The%2BGreat%2BHunt%2BUSA.jpg',
     mapUrl: 'http://privat.bahnhof.se/wb160542/bengt/bokfiler/Route%2000%20New%20Spring.jpg'
 })
