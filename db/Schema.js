@@ -21,6 +21,11 @@ const WorldsSchema = new Schema (
             required: true,
             default: 'A Fantasy World of unimaginable wonder!'
         },
+        tripAbout:{
+            type: String,
+            required: true,
+            default: 'We offer trips to a variety of locals in this world.'
+        },
         novelCover: {
             type: String,
             required: false,
