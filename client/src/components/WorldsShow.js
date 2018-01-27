@@ -1,6 +1,7 @@
 import React from 'react'
 import { WorldCardBig, PicHolderTwo, BottomCard } from './styled-components/Containers'
 import { ButtonLink } from './styled-components/Buttons'
+import { Link } from 'react-router-dom'
 
 
 const WorldsShow = (props) => {
@@ -16,7 +17,7 @@ const WorldsShow = (props) => {
                 <h2>{world.worldName}</h2>
                 <h3><span>From:</span> {world.seriesFrom}</h3>
                 <p>{world.tripAbout}</p>
-                <ButtonLink>Locales</ButtonLink>
+                <Link to={`/Worlds/${world._id}/Locations`} style={{textDecoration: 'none', color: 'WindowText'}}><ButtonLink>Locales</ButtonLink></Link>
             </BottomCard>
         </WorldCardBig>
 
