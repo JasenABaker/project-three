@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { ButtonFooterOne, ButtonFooterTwo} from './Buttons'
+import { ButtonFooterOne, ButtonFooterTwo } from './Buttons'
+import { Link } from 'react-router-dom'
 
 
 
@@ -20,16 +21,23 @@ const StyleFooter = styled.footer`
     }
 `
 
+const ButtonDiv = styled.div`
+    height: 40%;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+`
+
 
 class Footer extends Component {
-    render(){
-        return(
+    render() {
+        return (
             <StyleFooter>
                 <h1>Fantasy Destinations. Endless Possibilities</h1>
-                <div>
-                    <ButtonFooterOne>See Users</ButtonFooterOne>
-                    <ButtonFooterTwo>See Worlds</ButtonFooterTwo>
-                </div>
+                <ButtonDiv>
+                    <Link to='/Users' style={{ textDecoration: 'none', color: 'inherit' }}><ButtonFooterOne>See Users</ButtonFooterOne></Link>
+                    <Link to='/Worlds' style={{ textDecoration: 'none', color: 'inherit' }}><ButtonFooterTwo>See Worlds</ButtonFooterTwo></Link>
+                </ButtonDiv>
             </StyleFooter>
 
         )
