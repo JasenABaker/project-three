@@ -10,7 +10,6 @@ const StyleFooter = styled.footer`
     height: 30vh;
     width: 100vw;
     background-color:#D81E5B;
-    align-self: flex-end;
     display: flex;
     flex-direction: column;
     justify-content: center;

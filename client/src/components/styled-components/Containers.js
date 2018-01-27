@@ -14,12 +14,13 @@ export const PageContainer = styled.div`
 `
 export const ContainerOne = styled.div`
 margin-top: 30px;
-height: 75vh;
+height: 100%;
 width: 100vw;
 display: flex;
 justify-content: space-around;
 align-items: center;
 flex-wrap: wrap;
+flex: 1 0 auto;
 `
 export const ContainerOneSmall = ContainerOne.extend`
     height: 100vh;

@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import UserList from './UserList'
 import Header from './styled-components/Header'
+import {PageContainer} from './styled-components/Containers'
 import { Home, World, Plus } from './styled-components/Icon'
+import Footer from './styled-components/Footer'
 
 
 class UserPage extends Component {
@@ -11,7 +13,7 @@ class UserPage extends Component {
     render() {
         //console.log("Rendering User Page")
         return (
-            <div>
+            <PageContainer>
                 <Header>
                     <h1>Fanta<span>See</span></h1>
                     <nav><ul>
@@ -24,7 +26,8 @@ class UserPage extends Component {
                 <div>
                     <UserList users={this.props.users} />
                 </div>
-            </div>
+                <Footer />
+            </PageContainer>
         )
     }
 }
