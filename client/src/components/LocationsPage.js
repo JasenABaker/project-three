@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { PageContainer, ContainerTwoSmall } from './styled-components/Containers'
-import { WorldSplash, HeaderTwo } from './styled-components/Splash'
+import { NovelSplash, HeaderThree } from './styled-components/Splash'
 import { Home, World, User } from './styled-components/Icon'
 import Footer from './styled-components/Footer'
 
@@ -17,7 +17,7 @@ class LocationsPage extends Component {
         axios.get(`/api/Worlds/${this.props.match.params.worldId}`)
         .then((res)=>{
             console.log(res.data)
-            this.setState({world: res.data})
+            this.setState({world: res.data, stateNotSet: false})
 
         }).catch((err)=>{
             console.log(err)
@@ -31,7 +31,7 @@ class LocationsPage extends Component {
             this.state.stateNotSet ? <div></div> :
             (
             <PageContainer>
-                <HeaderTwo>
+                <HeaderThree>
                     <h1>Fanta<span>See</span></h1>
                     <nav><ul>
                         <Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}><li><Home /></li></Link>
@@ -39,11 +39,11 @@ class LocationsPage extends Component {
                         <Link to='/Users' style={{ textDecoration: 'none', color: 'inherit' }}><li><User /></li></Link>
                     </ul>
                     </nav>
-                </HeaderTwo>
-                <WorldSplash>
-                    <h2></h2>
-                    
-                </WorldSplash>
+                </HeaderThree>
+                <NovelSplash>
+                    <h2>{world.worldName} Locations</h2>
+                    <img src={world.novelCover} alt={world.seriesFrom}/>
+                </NovelSplash>
 
                 <div>
                     

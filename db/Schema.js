@@ -26,7 +26,7 @@ const WorldsSchema = new Schema (
             required: true,
             default: 'We offer trips to a variety of locals in this world.'
         },
-        novelCover: {
+        photoUrl: {
             type: String,
             required: false,
             default: 'http://t3.gstatic.com/images?q=tbn:ANd9GcRdt-j1kozfrgvimYYVKAJfew7BDnLiaGTolktzVZFRM4Qgfc9l'

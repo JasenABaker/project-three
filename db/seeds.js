@@ -37,7 +37,7 @@ const middleEarth = new World({
     for you! Journey to the peaceful Shire and share a pipe with the 
     hobbits. Ride with the Rohirrim on the plains of Rohan. Or 
     travel deep into the pit of Mordor and spit in Sauron's eye. `,
-    novelCover: 'https://images-na.ssl-images-amazon.com/images/I/51tW-UJVfHL._SX321_BO1,204,203,200_.jpg',
+    photoUrl: 'http://www.swaindestinations.com/blog/wp-content/uploads/2013/03/At-home-in-Middle-earth.jpg',
     mapUrl: 'https://img00.deviantart.net/99b4/i/2013/005/c/9/middle_earth_map_by_kethwyn2013-d5qih1p.jpg'
 })
 
@@ -63,7 +63,7 @@ const wizardingWorld = new World({
     street in the heart of London where one can find all their 
     magical needs, The Wizarding World is right up your alley if 
     you want a little magic added to the mundane.`,
-    novelCover: 'https://typeset-beta.imgix.net/lovelace/uploads/491/4ff201f0-84b1-0133-9fd7-0e7c926a42af.png',
+    photoUrl:'https://i.ytimg.com/vi/xBAeOTHtZVg/maxresdefault.jpg',
     mapUrl: 'http://img.auctiva.com/imgdata/1/4/4/1/6/8/2/webimg/459583018_o.jpg'
 })
 
@@ -84,7 +84,7 @@ const sevenKingdoms = new World({
     bloodthirsty ice zombies plot your destruction sounds like fun. 
     You are absolutely insane. We are not responsible for your safety. 
     Travel to the Seven Kingdoms. It's gonna suck.`,
-    novelCover: 'https://cdn.waterstones.com/bookjackets/large/9780/0075/9780007578580.jpg',
+    photoUrl:'http://watchersonthewall.com/wp-content/uploads/2016/12/Kings-Landing-Great-Sept-6x10-1.png',
     mapUrl: "https://cdn.vox-cdn.com/thumbor/w-IFN0FWpN4BGfhZaV9EYqs4nLo=/51x0:977x617/1200x800/filters:focal(51x0:977x617)/cdn.vox-cdn.com/uploads/chorus_image/image/50017015/Screen_Shot_2016-07-04_at_12.37.15_PM.0.0.png"
 })
 
@@ -109,7 +109,7 @@ const wheelOfTime = new World({
     from place to place. Roam the Wastes with the enigmatic Aiel 
     and learn the ways of ji'e'toh.  Or hold court with the Empress 
     of the Crystal Throne.`,
-    novelCover: 'http://1.bp.blogspot.com/-nMceHwqPU2s/TiSPsajp7aI/AAAAAAAAD5c/sfvJbho2ccc/s1600/The%2BGreat%2BHunt%2BUSA.jpg',
+    photoUrl:'https://vignette.wikia.nocookie.net/wot/images/4/44/Tar_Valon.jpg/revision/latest?cb=20100320230956',
     mapUrl: 'http://privat.bahnhof.se/wb160542/bengt/bokfiler/Route%2000%20New%20Spring.jpg'
 })
 

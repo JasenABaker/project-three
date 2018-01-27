@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Header } from './Header';
 
 
 
@@ -86,4 +87,20 @@ export const HeaderTwo = styled.header `
     
 `
 
-export default {Splash, ButtonText, WorldSplash, HeaderTwo}
+export const HeaderThree = HeaderTwo.extend`
+    border-bottom: 4px solid #DBD56E;
+`
+
+export const NovelSplash = WorldSplash.extend`
+    img{
+        transform: translateY(0)
+    }
+
+`
+
+export default {Splash, 
+                ButtonText, 
+                WorldSplash, 
+                HeaderTwo, 
+                HeaderThree,
+                NovelSplash}
