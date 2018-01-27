@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 
 
 const StyleFooter = styled.footer`
+    margin-top: auto;
     height: 30vh;
     width: 100vw;
     background-color:#D81E5B;

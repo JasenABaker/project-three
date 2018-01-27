@@ -8,6 +8,7 @@ import Header from './styled-components/Header'
 import { PageContainer } from './styled-components/Containers'
 import { ButtonDelete, ButtonEdit } from './styled-components/Buttons'
 import { Home, World, User } from './styled-components/Icon'
+import Footer from './styled-components/Footer'
 
 
 
@@ -104,7 +105,7 @@ class UserShow extends Component {
 
                         <WorldView worlds={this.state.user.worldsVisited} />
 
-
+                        <Footer />
                     </PageContainer>
                 )
 

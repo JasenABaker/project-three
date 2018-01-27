@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 
 export const PageContainer = styled.div`
-    height: 200vh;
+    min-height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -45,12 +45,12 @@ export const ContainerTwoSmall = ContainerTwo.extend`
 
 `
 export const ContainerThree = styled.div`
-    height: 70vh;
     width: 100vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    flex: 1 0 auto;
 `
 export const ContainerOneColumn = ContainerOne.extend`
     flex-direction: column;
@@ -71,8 +71,8 @@ export const FormEdit = FormContainer.extend`
 `
 
 export const WorldCard = styled.div`
-height: 100%;
-width: 20%;
+height: 80vh;
+width: 20vw;
 display: flex;
 flex-direction: column;
 justify-content: space-around;

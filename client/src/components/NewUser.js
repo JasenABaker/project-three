@@ -79,6 +79,7 @@ class NewUser extends Component {
                                     <InputStyle name='userName' type='text' placeholder='User Name' onChange={this.handleInputChange} />
                                     <InputStyle name='home' type='text' placeholder='Hometown' onChange={this.handleInputChange} />
                                     <InputStyle name='photoUrl' type='text' placeholder='Picture Url' onChange={this.handleInputChange} />
+                                    <InputStyle name='testimonial' type='text' placeholder='Testimonial' onChange={this.handleInputChange} />
                                     <InputButton type='submit' value='Create New User' />
                                 </FormContainer>
                             </form>
