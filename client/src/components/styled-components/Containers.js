@@ -126,7 +126,7 @@ export const BottomBottomCard = BottomCard.extend`
 `
 
 export const WorldCardBig = WorldCard.extend`
-    height: 75vh;
+    height: 80vh;
     width: 35vw;
     margin-bottom: 30px;
     border: .5px soild #292F36;

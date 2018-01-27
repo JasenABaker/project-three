@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import Header from './styled-components/Header'
 import axios from 'axios'
 import { ContainerOneColumn, FormEdit } from './styled-components/Containers'
-import { InputStyle, InputButton } from './styled-components/Inputs'
+import { InputStyle, InputButtonEdit } from './styled-components/Inputs'
 import { Redirect } from 'react-router-dom'
 import { Home, World, User } from './styled-components/Icon'
 
@@ -75,7 +75,7 @@ class EditUser extends Component {
                                 <InputStyle name='photoUrl' type='text' placeholder='Picture Url' value={user.photoUrl} onChange={this.handleInputChange} />
                                 <InputStyle name='testimonial' type='text' placeholder='Testimonial' value={user.testimonial} onChange={this.handleInputChange} />
                                 <InputStyle name='numberOfTrips' type='number' placeholder='Number of Trips' value={user.numberOfTrips} onChange={this.handleInputChange} />
-                                <InputButton type='submit' value={`Edit ${user.userName}`} />
+                                <InputButtonEdit type='submit' value={`Edit ${user.userName}`} />
                             </FormEdit>
                         </form>
                     </div>

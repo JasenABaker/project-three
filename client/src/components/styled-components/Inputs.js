@@ -11,14 +11,27 @@ export const InputButton = styled.input`
         width: 200px;
         font-size: 24px;
         color:#EFE9E7;
-        background-color: #2D93AD;
+        background: #2D93AD;
+        cursor: pointer;
+        transition:0.08s ease-in;
 
-        &:hover {
-            background-color: #DBD56E;
-            color:#2D93AD;
+        :hover {
+            color: #2D93AD;
+            background: #DBD56E;
+        
+
+        }
+`
+
+export const InputButtonEdit = InputButton.extend`
+        background: #46237A;
+
+        :hover {
+            color:#46237A;
+            background:#3DDC97;
         }
 `
 
 
 
-export default { InputStyle, InputButton }
+export default { InputStyle, InputButton, InputButtonEdit }
