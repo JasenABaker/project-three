@@ -5,6 +5,7 @@ import { WorldSplash, HeaderTwo } from './styled-components/Splash'
 import WorldsList from './WorldsList'
 import Winterfell from '../images/Winterfell.jpg'
 import { Home, Plus, User } from './styled-components/Icon'
+import Footer from './styled-components/Footer'
 
 
 class WorldsPage extends Component {
@@ -32,6 +33,7 @@ class WorldsPage extends Component {
                     <WorldsList worlds={this.props.worlds} />
 
                 </div>
+                <Footer />
             </PageContainer>
         )
     }

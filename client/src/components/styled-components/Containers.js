@@ -14,16 +14,12 @@ export const PageContainer = styled.div`
 `
 export const ContainerOne = styled.div`
 margin-top: 30px;
-height: 100%;
 width: 100vw;
 display: flex;
 justify-content: space-around;
 align-items: center;
 flex-wrap: wrap;
 flex: 1 0 auto;
-`
-export const ContainerOneSmall = ContainerOne.extend`
-    height: 100vh;
 `
 export const ContainerTwo = styled.div`
     height: 75vh;
@@ -130,7 +126,7 @@ export const BottomBottomCard = BottomCard.extend`
 `
 
 export const WorldCardBig = WorldCard.extend`
-    height: 70vh;
+    height: 75vh;
     width: 35vw;
     margin-bottom: 30px;
     border: .5px soild #292F36;

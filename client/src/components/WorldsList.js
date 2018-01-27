@@ -1,5 +1,5 @@
 import React from 'react'
-import {ContainerOneSmall} from './styled-components/Containers'
+import {ContainerOne} from './styled-components/Containers'
 import WorldsShow from './WorldsShow'
 
 
@@ -7,7 +7,7 @@ import WorldsShow from './WorldsShow'
 
 const WorldsList = (props) =>{
     return(
-        <ContainerOneSmall>
+        <ContainerOne>
             {
                 props.worlds.map((world)=>{
                     return(
@@ -15,7 +15,7 @@ const WorldsList = (props) =>{
                 )})
             
             }
-        </ContainerOneSmall>
+        </ContainerOne>
 
     )
 }

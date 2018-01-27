@@ -1,5 +1,5 @@
 import React from 'react'
-import { WorldCardBig, PicHolderTwo, BottomCard} from './styled-components/Containers'
+import { WorldCardBig, PicHolderTwo, BottomCard } from './styled-components/Containers'
 import { ButtonLink } from './styled-components/Buttons'
 
 
@@ -16,8 +16,8 @@ const WorldsShow = (props) => {
                 <h2>{world.worldName}</h2>
                 <h3><span>From:</span> {world.seriesFrom}</h3>
                 <p>{world.tripAbout}</p>
+                <ButtonLink>Locales</ButtonLink>
             </BottomCard>
-            <ButtonLink>Locales</ButtonLink>
         </WorldCardBig>
 
     )
