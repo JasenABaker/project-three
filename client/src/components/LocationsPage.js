@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { PageContainer, ContainerTwoSmall } from './styled-components/Containers'
-import { NovelSplash, HeaderThree } from './styled-components/Splash'
+import { WorldSplash, HeaderThree } from './styled-components/Splash'
 import { Home, World, User } from './styled-components/Icon'
 import Footer from './styled-components/Footer'
 
@@ -40,10 +40,10 @@ class LocationsPage extends Component {
                     </ul>
                     </nav>
                 </HeaderThree>
-                <NovelSplash>
+                <WorldSplash>
                     <h2>{world.worldName} Locations</h2>
-                    <img src={world.novelCover} alt={world.seriesFrom}/>
-                </NovelSplash>
+                    <img src={world.photoUrl} alt={world.seriesFrom}/>
+                </WorldSplash>
 
                 <div>
                     

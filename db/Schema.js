@@ -3,6 +3,45 @@ const Schema = mongoose.Schema
 
 mongoose.Promise = global.Promise
 
+const LocationsSchema = new Schema (
+    {
+        locationName: {
+            type: String,
+            required: true,
+            unique: true,
+            sparse: true,
+        },
+        photoUrl: {
+            type: String,
+            required: true,
+            default:'http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1494629404/feet-maldives-BUDGET0517.jpg?itok=WXyDCmii',
+        },
+        price: {
+            type: Number,
+            required: true,
+            default: 500,
+        },
+        duration: {
+            type: Number,
+            required: true,
+            default: 10
+        },
+        shortDescription: {
+            type: String,
+            required: true,
+            unique: false,
+        },
+        longDescription: {
+            type: String,
+            required: true,
+            unique: false
+        }
+    },
+    {
+        timestamps: {}
+    }
+)
+
 const WorldsSchema = new Schema (
     {
         worldName: {
@@ -36,7 +75,7 @@ const WorldsSchema = new Schema (
             required: false,
             default: 'https://img00.deviantart.net/99b4/i/2013/005/c/9/middle_earth_map_by_kethwyn2013-d5qih1p.jpg'
         },
-        locations: []
+        locations: [LocationsSchema]
     },
     {
         timestamps: {}
@@ -93,5 +132,6 @@ const UserSchema = new Schema (
 
 module.exports = {
     UserSchema,
-    WorldsSchema
+    WorldsSchema,
+    LocationsSchema
 }
