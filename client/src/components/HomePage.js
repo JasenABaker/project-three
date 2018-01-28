@@ -17,9 +17,9 @@ class HomePage extends Component {
                 <Header>
                     <h1>Fanta<span>See</span></h1>
                     <nav><ul>
-                        <Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}><li><Home />Home</li></Link>
-                        <Link to='/Users/new' style={{ textDecoration: 'none', color: 'inherit' }}><li><Plus />New User</li></Link>
-                        <Link to='/Worlds' style={{ textDecoration: 'none', color: 'inherit' }}><li><World />Worlds</li></Link>
+                        <Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}><li><Home /></li></Link>
+                        <Link to='/Users/new' style={{ textDecoration: 'none', color: 'inherit' }}><li><Plus /></li></Link>
+                        <Link to='/Worlds' style={{ textDecoration: 'none', color: 'inherit' }}><li><World /></li></Link>
                     </ul>
                     </nav>
                 </Header>
