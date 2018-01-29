@@ -9,6 +9,7 @@ const UserCard = styled.div`
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 10px;
 
     h3{
         font-family: 'Risque', cursive;
