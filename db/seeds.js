@@ -6,7 +6,7 @@ mongoose.Promise = global.Promise
 const User = require('./models/User')
 const World = require('./models/World')
 const Location = require('./models/Location')
-const Hobbit = require('../public/images/hobbitHole.jpg')
+
 
 mongoose.connect(process.env.MONGODB_URI)
 
@@ -89,7 +89,6 @@ const middleEarth = new World({
     for you! Journey to the peaceful Shire and share a pipe with the 
     hobbits. Ride with the Rohirrim on the plains of Rohan. Or 
     travel deep into the pit of Mordor and spit in Sauron's eye. `,
-    photoUrl: Hobbit,
     mapUrl: 'https://img00.deviantart.net/99b4/i/2013/005/c/9/middle_earth_map_by_kethwyn2013-d5qih1p.jpg'
 })
 //'http://www.swaindestinations.com/blog/wp-content/uploads/2013/03/At-home-in-Middle-earth.jpg'
