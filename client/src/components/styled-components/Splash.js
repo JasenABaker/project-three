@@ -43,6 +43,7 @@ export const ButtonText = styled.div`
 `
 export const WorldSplash = Splash.extend`
     height: 40vh;
+    background:#292F36;
 
         img{
             height: auto;

@@ -161,7 +161,7 @@ const wheelOfTime = new World({
     from place to place. Roam the Wastes with the enigmatic Aiel 
     and learn the ways of ji'e'toh.  Or hold court with the Empress 
     of the Crystal Throne.`,
-    photoUrl:'http://reversehomesickness.com/wp-content/uploads/2013/12/mont-st-michel.jpg'
+    photoUrl:'http://reversehomesickness.com/wp-content/uploads/2013/12/mont-st-michel.jpg',
     mapUrl: 'http://privat.bahnhof.se/wb160542/bengt/bokfiler/Route%2000%20New%20Spring.jpg'
 })
 
