@@ -5,6 +5,7 @@ mongoose.Promise = global.Promise
 
 const User = require('./models/User')
 const World = require('./models/World')
+const Location = require('./models/Location')
 
 mongoose.connect(process.env.MONGODB_URI)
 
@@ -19,6 +20,56 @@ mongoose.connection.on('error', (error) => {
     `)
     process.exit(-1)
 })
+
+const shire = new Location ({
+        locationName: 'The Shire',
+        photoUrl: 'https://vignette.wikia.nocookie.net/lotr/images/8/86/Hobbiton.jpg/revision/latest?cb=20130225123138',
+        price: 1000,
+        duration: 7,
+        shortDescription: 'Homeland of the Hobbits on Middle-Earth.',
+        longDescription:`Enjoy friendly hospitality from 
+        Middle-earth's most welcoming people. Tour around the 
+        countryside of the Shire, visiting Hobbiton, Michel Delving, 
+        Tuckborough, Bucklebury, and Crickhollow.`,
+        itinerary: ['Journey into Crickhollow', 'Meet Your tourguide, Fatty Bolger and explore Crickhollow',
+    'Travel to Michel Devlving and tour the Mathom house', 
+    'Travel to Hobbiton', 'Explore Hobbiton and BagsEnd, travel to Bucklbury',
+    'Spend a day along the Brandywine river and visit Brandy Hall', 'Travel to Tuckborough and feast with the Thain.']
+
+})
+
+const rohan = new Location ({
+    locationName: 'Rohan and Gondor',
+    photoUrl: 'https://vignette.wikia.nocookie.net/lotr/images/8/8c/Golden_Hall_of_Meduseld.png/revision/latest?cb=20121021060229',
+    price: 2000,
+    duration: 8,
+    shortDescription: 'Ride with the Horse-lords and visit with the King of Gondor',
+    longDescription:`Spend time with men of honor. Ride the around 
+    the Riddermark with the sons of Eorl on horseback, 
+    explore Helm's Deep and the caves beneath, travel to Gondor 
+    and see the magnificent fortress of Minas Tirith, and spend 
+    time in the city of Osgiliath.`,
+    itinerary: ['Journey into Edoras', 'Feast in the Golden Hall of Meduseld with the King of Rohan.',
+    "Ride a famed Mearas horse from Edoras to Helm's Deep.", "Explore Helm's Deep and the Caves beneath.",
+    'Travel to Gondor.','Explore the city of Osgiliath.','Travel to Minas Tirith and explore the fortress',
+    'Drink and sing with the king of Gondor.']
+})
+const mordor = new Location ({
+    locationName: 'Mordor',
+    photoUrl: 'https://vignette.wikia.nocookie.net/lotr/images/e/ec/Mordor%27s_DuoSpire.png/revision/latest?cb=20120621003755',
+    price: 5000,
+    duration: 3,
+    shortDescription: 'For the brave at heart, travel into the cursed lands of Mordor.',
+    longDescription: `If you really want an adventurous vacation, 
+    travel into the heart of Mordor. Visit the pit of Mount Doom 
+    and stare into its fires, take a tour of Barad-Dur, go on a 
+    raiding party with Orcs, and see the great Black Gate. Orcs are 
+    notoriously bloodthirsty so travel at your own risk.`,
+    itinerary: ["Travel up the back stair and through Shelob's lair into Mordor.", 
+    'Travel into Mount Doom, throw something into the fire, and then tour Barad-Dur.', 
+    'Meet Orc raiders, travel to the Black gate, and pillage foolish human towns outside of the black gates.']
+})
+
 
 const middleEarth = new World({
     worldName: 'Middle Earth',
@@ -156,6 +207,7 @@ User.remove({}).then(() => {
         })
         return timTurnquist.save()
     }).then(() => {
+        middleEarth.locations.push(shire,rohan,mordor)
         return middleEarth.save()
     }).then(() => {
         return wizardingWorld.save()
