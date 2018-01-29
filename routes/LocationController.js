@@ -12,3 +12,6 @@ router.get('/', (req,res)=>{
         console.error(err)
     })
 })
+
+
+module.exports= router
