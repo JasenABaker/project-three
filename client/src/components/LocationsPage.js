@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import { PageContainer, ContainerTwoSmall } from './styled-components/Containers'
+import { PageContainer, ContainerThree } from './styled-components/Containers'
 import { WorldSplash, HeaderThree } from './styled-components/Splash'
 import { Home, World, User } from './styled-components/Icon'
 import Footer from './styled-components/Footer'
+import Location from './Location'
 
 
 class LocationsPage extends Component {
@@ -45,10 +46,16 @@ class LocationsPage extends Component {
                     <img src={world.photoUrl} alt={world.seriesFrom}/>
                 </WorldSplash>
 
-                <div>
-                    
+                <ContainerThree>
+                    {
+                        this.state.world.locations.map((location)=>{
+                            return(
+                                <Location location={location}  key={location._id} index={location._id} />
+                            )
+                        })
+                    }
 
-                </div>
+                </ContainerThree>
                 <Footer />
             </PageContainer>
 
