@@ -94,7 +94,7 @@ class App extends Component {
               <Route exact path='/Users/:userId/edit' render={editUserPage}/>
               <Route exact path='/Worlds' render={worldPage} />
               <Route exact path='/Worlds/:worldId/Locations' component={LocationsPage} />
-              <Route exact path='/Worlds/:worldId/Locations/:LocationId' component={LocationShow} />
+              <Route exact path='/Worlds/:worldId/Locations/:LocationsId' component={LocationShow} />
             </Switch>
           </div>
         </Router>

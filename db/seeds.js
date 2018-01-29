@@ -32,10 +32,10 @@ const shire = new Location ({
         Middle-earth's most welcoming people. Tour around the 
         countryside of the Shire, visiting Hobbiton, Michel Delving, 
         Tuckborough, Bucklebury, and Crickhollow.`,
-        itinerary: ['Journey into Crickhollow', 'Meet Your tourguide, Fatty Bolger and explore Crickhollow',
-    'Travel to Michel Devlving and tour the Mathom house', 
-    'Travel to Hobbiton', 'Explore Hobbiton and BagsEnd, travel to Bucklbury',
-    'Spend a day along the Brandywine river and visit Brandy Hall', 'Travel to Tuckborough and feast with the Thain.']
+        itinerary: ['Journey into Crickhollow.', 'Meet Your tourguide, Fatty Bolger and explore Crickhollow.',
+    'Travel to Michel Devlving and tour the Mathom house.', 
+    'Travel to Hobbiton.', 'Explore Hobbiton and BagsEnd, travel to Bucklbury.',
+    'Spend a day along the Brandywine river and visit Brandy Hall.', 'Travel to Tuckborough and feast with the Thain.']
 
 })
 

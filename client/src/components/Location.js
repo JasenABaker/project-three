@@ -27,7 +27,7 @@ const Location = (props)=>{
                 <p>{location.shortDescription}</p>
                 
             </MiddleCard>
-            <Link to={`/Worlds/${props.world._id}/Locations/${location._id}`} style={{textDecoration: 'none', color: 'WindowText'}}> <A>></A> </Link>
+            <Link to={`/Worlds/${props.world}/Locations/${location._id}`} style={{textDecoration: 'none', color: 'WindowText'}}> <A>></A> </Link>
         </LocationCard>
     )
 }

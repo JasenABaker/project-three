@@ -17,7 +17,7 @@ class LocationsPage extends Component {
     componentWillMount () {
         axios.get(`/api/Worlds/${this.props.match.params.worldId}`)
         .then((res)=>{
-            console.log(res.data)
+            //console.log(res.data)
             this.setState({world: res.data, stateNotSet: false})
 
         }).catch((err)=>{
@@ -52,7 +52,7 @@ class LocationsPage extends Component {
                     {
                         this.state.world.locations.map((location)=>{
                             return(
-                                <Location location={location}  key={location._id} index={location._id}  world={world}/>
+                                <Location location={location}  key={location._id} index={location._id}  world={world._id}/>
                             )
                         })
                     }

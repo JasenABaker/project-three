@@ -42,8 +42,6 @@ const UserController = require('./routes/UserController')
 app.use('/api/Users', UserController)
 const WorldController = require('./routes/WorldController')
 app.use('/api/Worlds', WorldController)
-const LocationController = require('./routes/LocationController')
-app.use('/api/Locations', LocationController)
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

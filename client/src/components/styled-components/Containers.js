@@ -21,6 +21,11 @@ align-items: center;
 flex-wrap: wrap;
 flex: 1 0 auto;
 `
+export const ContainerOneSimple = ContainerOne.extend`
+    margin-top: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+`
 export const ContainerTwo = styled.div`
     height: 75vh;
     width: 100vw;
@@ -192,6 +197,7 @@ export const BottomBottomCard = BottomCard.extend`
 
 export default { PageContainer, 
                 ContainerOne, 
+                ContainerOneSimple,
                 ContainerTwo, 
                 ContainerTwoSmall,
                 ContainerOneColumn, 
@@ -207,4 +213,5 @@ export default { PageContainer,
                 WorldCardBig,
                 PicHolderTwo,
                 PicHolderThree,
+                PicHolderFour,
                 BottomBottomCard }

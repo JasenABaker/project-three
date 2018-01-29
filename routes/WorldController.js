@@ -32,6 +32,19 @@ router.get('/:worldId', (req,res)=>{
     })
 })
 
+router.get('/:worldId/Locations/:LocationsId', (req,res)=>{
+    const worldId = req.params.worldId
+    const locationsId =req.params.LocationsId
+
+    Worlds.findById(worldId).then((world)=>{
+        const location = world.locations.id(locationsId)
+
+        res.json(location)
+    }).catch((err)=>{
+        console.error(err)
+    })
+})
+
 router.patch('/:worldId', (req,res)=>{
     const worldUpdate = req.body
     const worldId = req.params.worldId
