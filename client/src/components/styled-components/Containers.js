@@ -48,6 +48,14 @@ export const ContainerThree = styled.div`
     flex-wrap: wrap;
     flex: 1 0 auto;
 `
+export const ContainerThreeColumn = ContainerThree.extend`
+        flex-direction: column;
+        margin-bottom: 20px;
+
+        p{
+            width: 50%;
+        }
+`
 export const ContainerOneColumn = ContainerOne.extend`
     flex-direction: column;
 `
@@ -75,6 +83,23 @@ justify-content: space-around;
 align-items: center;
 border: 2px solid #292F36;
 `
+export const WorldCardBig = WorldCard.extend`
+    height: 80vh;
+    width: 35vw;
+    margin-bottom: 30px;
+    border: .5px soild #292F36;
+
+`
+export const LocationCard = WorldCard.extend`
+        height: 20vh;
+        width: 80vw;
+        flex-direction: row;
+        justify-content: none;
+        border-top: .5px solid #9DA0A3;
+        border-bottom: .5px solid #9DA0A3;
+        border-right: none;
+        border-left: none;
+`
 
 export const PicHolder = styled.div`
     height: 45%;
@@ -87,6 +112,21 @@ export const PicHolder = styled.div`
         height: 100%;
         width: auto;
     }
+`
+export const PicHolderTwo = PicHolder.extend`
+    margin-top: 10px;
+    width: 60%;
+    border: none;
+`
+export const PicHolderThree = PicHolder.extend`
+        height: 80%;
+        width: 20%;
+`
+
+export const PicHolderFour = PicHolder.extend`
+    height: 80%;
+    width: 15%;
+    border: none;
 `
 export const BottomCard = styled.div`
     height: 45%;
@@ -111,6 +151,30 @@ export const BottomCard = styled.div`
         width: 90%;
     }
 `
+export const MiddleCard = BottomCard.extend`
+    height: 50%;
+    width: 70%;
+    align-items: flex-start;
+    justify-content: none;
+
+    h3{
+        font-size: 1.5em;
+        font-family: 'Playfair Display', serif;
+        font-weight: 900;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    p{
+        margin-top: 0;
+        font-size: 1em;
+    }
+    h4{
+        margin-bottom:0;
+        font-size: .9em;
+        color:#9DA0A3;
+        font-weight: none;
+    }
+`
 export const BottomBottomCard = BottomCard.extend`
     height: 40%;
     width: 90%;
@@ -125,22 +189,6 @@ export const BottomBottomCard = BottomCard.extend`
     }
 `
 
-export const WorldCardBig = WorldCard.extend`
-    height: 80vh;
-    width: 35vw;
-    margin-bottom: 30px;
-    border: .5px soild #292F36;
-
-`
-export const PicHolderTwo = PicHolder.extend`
-    margin-top: 10px;
-    width: 60%;
-    border: none;
-`
-export const PicHolderThree = PicHolder.extend`
-        height: 80%;
-        width: 20%;
-`
 
 export default { PageContainer, 
                 ContainerOne, 
@@ -150,9 +198,12 @@ export default { PageContainer,
                 FormContainer, 
                 FormEdit, 
                 ContainerThree, 
+                ContainerThreeColumn,
                 WorldCard, 
+                LocationCard,
                 PicHolder, 
-                BottomCard, 
+                BottomCard,
+                MiddleCard, 
                 WorldCardBig,
                 PicHolderTwo,
                 PicHolderThree,

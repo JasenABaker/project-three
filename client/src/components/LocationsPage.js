@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import { PageContainer, ContainerThree } from './styled-components/Containers'
+import { PageContainer, ContainerThreeColumn } from './styled-components/Containers'
 import { WorldSplash, HeaderThree } from './styled-components/Splash'
 import { Home, World, User } from './styled-components/Icon'
 import Footer from './styled-components/Footer'
@@ -46,16 +46,18 @@ class LocationsPage extends Component {
                     <img src={world.photoUrl} alt={world.seriesFrom}/>
                 </WorldSplash>
 
-                <ContainerThree>
+                <ContainerThreeColumn>
+                        <p>These are the most popular destination of {world.worldName}. Chosen from the series {world.seriesFrom}, each location will provide a wealth of knowledge and experinces from {world.seriesFrom}!</p>
+                    
                     {
                         this.state.world.locations.map((location)=>{
                             return(
-                                <Location location={location}  key={location._id} index={location._id} />
+                                <Location location={location}  key={location._id} index={location._id}  world={world}/>
                             )
                         })
                     }
 
-                </ContainerThree>
+                </ContainerThreeColumn>
                 <Footer />
             </PageContainer>
 
