@@ -35,7 +35,8 @@ const LocationsSchema = new Schema (
             type: String,
             required: true,
             unique: false
-        }
+        },
+        itinerary:[]
     },
     {
         timestamps: {}
@@ -68,7 +69,7 @@ const WorldsSchema = new Schema (
         photoUrl: {
             type: String,
             required: false,
-            default: 'http://t3.gstatic.com/images?q=tbn:ANd9GcRdt-j1kozfrgvimYYVKAJfew7BDnLiaGTolktzVZFRM4Qgfc9l'
+            default: 'http://kb4images.com/images/the-hobbit-wallpaper/36763408-the-hobbit-wallpaper.jpg'
         },
         mapUrl: {
             type: String,
