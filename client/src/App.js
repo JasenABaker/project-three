@@ -8,6 +8,7 @@ import NewUser from './components/NewUser'
 import EditUser from './components/EditUser'
 import WorldsPage from './components/WorldsPage'
 import LocationsPage from './components/LocationsPage'
+import LocationShow from './components/LocationShow'
 
 
 class App extends Component {
@@ -93,6 +94,7 @@ class App extends Component {
               <Route exact path='/Users/:userId/edit' render={editUserPage}/>
               <Route exact path='/Worlds' render={worldPage} />
               <Route exact path='/Worlds/:worldId/Locations' component={LocationsPage} />
+              <Route exact path='/Worlds/:worldId/Locations/:LocationId' component={LocationShow} />
             </Switch>
           </div>
         </Router>
