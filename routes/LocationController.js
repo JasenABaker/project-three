@@ -13,5 +13,18 @@ router.get('/', (req,res)=>{
     })
 })
 
+router.get('/:LocationsId', (req,res)=>{
+    const worldId = req.params.worldId
+    const locationId = req.params.LocationsId
+
+    Worlds.findById(worldId).then((world)=>{
+        const location = world.locations.id(locationId)
+
+        res.json(location)
+    }).catch((err)=>{
+        console.error(err)
+    })
+})
+
 
 module.exports= router
