@@ -97,6 +97,7 @@ class Location extends Component {
                     <LeftSide>
                     <h2>{location.locationName}</h2>
                     <h3>{location.duration} days</h3>
+                    <h3>Price: ${location.price}</h3>
                     <p>{location.shortDescription}</p>
                     <Line />
                     <p>{location.longDescription}</p>

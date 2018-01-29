@@ -18,3 +18,20 @@ The users stories are located on Trello [here](https://trello.com/b/LZMgNOXp/pro
 ![wireframe five](https://github.com/JasenABaker/project-three/blob/master/Screen%20Shot%202018-01-22%20at%204.34.22%20PM.png)
 ![wireframe six](https://github.com/JasenABaker/project-three/blob/master/Screen%20Shot%202018-01-22%20at%204.34.39%20PM.png)
 ![wireframe seven](https://github.com/JasenABaker/project-three/blob/master/Screen%20Shot%202018-01-22%20at%204.34.49%20PM.png)
+
+# Technology and Techniques Used
+* React
+* Node
+* Express
+* Mongo db
+* styled-components
+* react-router-dom
+* axios
+
+# Things learned
+I had several mountains to climb when it came to this project. React at the beginning was mostly a mystery to me, but working through the hurdles that I encountered when setting state, passing props, and making sure the component reloads with the correct state after an axios call allowed me to understand the work flow in a react app better.
+
+# Version 2.0
+There were several goals that I had in mind for this project that I was unable to get to. First, for the Worlds and Locations models, I would like to add full CRUD functionality to them. For that to be acheived, my second goal was to have an Admin route so that only an admin can add Worlds and locations. Also, I wanted it to be a fully functioning travel site (besides the ability to actaully travel to diffrent universes), so that users can add the world and the locations they want to visit to a cart and then "purchase" that trip. The trip purchased would then show up on the users screen.
+
+
