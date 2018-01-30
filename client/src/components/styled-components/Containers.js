@@ -135,7 +135,7 @@ export const WorldCardBig = WorldCard.extend`
     border: .5px soild #292F36;
 
     @media screen and (max-width: 800px) {
-        height: 75vh;
+        height: 80vh;
     }
 
 `
