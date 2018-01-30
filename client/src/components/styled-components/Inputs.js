@@ -3,6 +3,10 @@ import styled from 'styled-components'
 
 export const InputStyle = styled.input`
     font-size: 34px;
+
+    @media screen and (max-width: 800px){
+        font-size: 24px;
+    }
 `
 
 export const InputButton = styled.input`

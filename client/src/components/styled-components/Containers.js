@@ -72,6 +72,11 @@ export const ContainerThreeColumn = ContainerThree.extend`
 `
 export const ContainerOneColumn = ContainerOne.extend`
     flex-direction: column;
+    @media screen and (max-width: 800px){
+        h1{
+            font-size: .99em;
+        }   
+    }
 `
 export const FormContainer = styled.div`
     height: 70vh;
@@ -82,6 +87,10 @@ export const FormContainer = styled.div`
     align-items: center;
     background-color: #86CB92;
     border: 2px solid #292F36;
+
+    @media screen and (max-width: 800px){
+    width: 90vw;   
+    }
 `
 
 export const FormEdit = FormContainer.extend`
@@ -98,7 +107,7 @@ align-items: center;
 border: 2px solid #292F36;
 
 @media screen and (max-width: 800px) {
-    min-height: 20vh;
+    height: 30vh;
     width: 90vw;
     flex-direction: row;
     margin-bottom: 10px;
@@ -176,6 +185,8 @@ export const BottomCard = styled.div`
     }
     @media screen and (max-width: 800px) {
         height: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
         h2{
             font-size: 2em;
