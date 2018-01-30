@@ -70,6 +70,11 @@ export const WorldSplash = Splash.extend`
             font-size: 2.5em;
             color: #EFE9E7;
         }
+        @media screen and (max-width: 800px){
+            h2{
+                font-size: 2em;
+            }
+            }
 `
 export const HeaderTwo = styled.header `
     height: 15vh;
@@ -98,6 +103,14 @@ export const HeaderTwo = styled.header `
         color:#EFE9E7;
         font-size: 24px;
     }
+    @media screen and (max-width: 800px){
+        h1{
+            font-size: 3em;
+        }
+        nav{
+            margin-right: auto;
+            width: 50%;
+        }
     
 `
 

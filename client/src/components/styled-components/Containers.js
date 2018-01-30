@@ -48,6 +48,11 @@ export const ContainerTwoSmall = ContainerTwo.extend`
     text-align: center;
     font-size: 14px;
 
+    @media screen and (max-width: 800px){
+    flex-direction: row;
+    width: 100vw;
+        }
+
 
 `
 export const ContainerThree = styled.div`
@@ -118,6 +123,10 @@ export const WorldCardBig = WorldCard.extend`
     width: 35vw;
     margin-bottom: 30px;
     border: .5px soild #292F36;
+
+    @media screen and (max-width: 800px) {
+        height: 75vh;
+    }
 
 `
 export const LocationCard = WorldCard.extend`

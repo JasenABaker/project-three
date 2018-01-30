@@ -38,7 +38,7 @@ export const Header = styled.header `
             margin-right: auto;
             width: 50%;
         }
-     
+
     }
     
 `

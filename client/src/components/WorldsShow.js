@@ -2,7 +2,7 @@ import React from 'react'
 import { WorldCardBig, PicHolderTwo, BottomCard } from './styled-components/Containers'
 import { ButtonLink } from './styled-components/Buttons'
 import { Link } from 'react-router-dom'
-
+import ScrollArea from 'react-scrollbar'
 
 const WorldsShow = (props) => {
     console.log(props)
