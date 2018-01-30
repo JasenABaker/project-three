@@ -74,6 +74,12 @@ export const ContainerThreeColumn = ContainerThree.extend`
         p{
             width: 50%;
         }
+        @media screen and (max-width: 800px) {
+            p{
+                font-size: .9em;
+                width: 100%;
+            }
+        }
 `
 export const ContainerOneColumn = ContainerOne.extend`
     flex-direction: column;
@@ -138,6 +144,12 @@ export const LocationCard = WorldCard.extend`
         border-bottom: .5px solid #9DA0A3;
         border-right: none;
         border-left: none;
+
+        @media screen and (max-width: 800px) {
+            height: 18vh;
+
+            
+        }
 `
 
 export const PicHolder = styled.div`
@@ -227,6 +239,18 @@ export const MiddleCard = BottomCard.extend`
         font-size: .9em;
         color:#9DA0A3;
         font-weight: none;
+    }
+    @media screen and (max-width: 800px){
+        h4{
+            font-size: .8em;
+        }
+        h3{
+            font-size: 1.3em;
+        }
+        p{
+            font-size: .9em;
+        }
+
     }
 `
 export const BottomBottomCard = BottomCard.extend`
