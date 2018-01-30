@@ -27,6 +27,13 @@ const Top = styled.div`
         width: 300px;
         border-radius: 50%;
     }
+    @media screen and (max-width: 800px){
+        flex-direction: column;
+
+        img {
+            display:none;
+        }
+    }
 `
 const Head = styled.div`
     display: flex;
@@ -44,6 +51,22 @@ const Head = styled.div`
         font-family: 'Playfair Display', serif;
         font-style: italic;
     }
+    @media screen and (max-width: 800px) {
+        h1{
+            font-size: 1.5em;
+        }
+        h2 {
+            font-size: .8em;
+            marign: 10px 10px;
+        }
+    }
+`
+const ButtonDiv = styled.div`
+@media screen and (max-width: 800px){
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
 `
 
 class UserShow extends Component {
@@ -93,12 +116,12 @@ class UserShow extends Component {
                             <h1>{user.userName}</h1>
                             <h2>{user.testimonial}</h2>
                             </Head>
-                            <div>
+                            <ButtonDiv>
                                 <Link to={`/Users/${this.props.match.params.userId}/edit`}
                                     style={{ textDecoration: 'none', color: 'inherit' }}>
                                     <ButtonEdit>Edit</ButtonEdit></Link>
                                 <ButtonDelete onClick={() => { this.deleteUser() }}>Delete</ButtonDelete>
-                            </div>
+                            </ButtonDiv>
                         </Top>
 
                         <h2>Worlds Visited</h2>

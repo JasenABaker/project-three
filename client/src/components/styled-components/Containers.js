@@ -57,6 +57,10 @@ export const ContainerThree = styled.div`
     align-items: center;
     flex-wrap: wrap;
     flex: 1 0 auto;
+
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
+    }
 `
 export const ContainerThreeColumn = ContainerThree.extend`
         flex-direction: column;
@@ -92,6 +96,13 @@ flex-direction: column;
 justify-content: space-around;
 align-items: center;
 border: 2px solid #292F36;
+
+@media screen and (max-width: 800px) {
+    min-height: 20vh;
+    width: 90vw;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
 `
 export const WorldCardBig = WorldCard.extend`
     height: 80vh;
@@ -121,6 +132,9 @@ export const PicHolder = styled.div`
     img {
         height: 100%;
         width: auto;
+    }
+    @media screen and (max-width: 800px) {
+        display: none;
     }
 `
 export const PicHolderTwo = PicHolder.extend`
@@ -159,6 +173,16 @@ export const BottomCard = styled.div`
     p{
         font-size: .7em;
         width: 90%;
+    }
+    @media screen and (max-width: 800px) {
+        height: 100%;
+
+        h2{
+            font-size: 2em;
+        }
+        p {
+            font-size: .9em;
+        }
     }
 `
 export const MiddleCard = BottomCard.extend`
