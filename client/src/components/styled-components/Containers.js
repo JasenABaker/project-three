@@ -20,6 +20,11 @@ justify-content: space-around;
 align-items: center;
 flex-wrap: wrap;
 flex: 1 0 auto;
+
+@media screen and (max-width: 800px){
+    flex-direction: column;
+}
+
 `
 export const ContainerOneSimple = ContainerOne.extend`
     margin-top: 10px;
