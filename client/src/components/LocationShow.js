@@ -54,6 +54,10 @@ const RightSide = styled.div`
         flew-wrap: wrap;
         marign-left: 0px;
         margin-top: 0px;
+
+        p{
+            font-size: .9em;
+        }
     }
 
 `
