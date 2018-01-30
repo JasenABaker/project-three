@@ -49,8 +49,12 @@ export const ButtonText = styled.div`
     }
     @media screen and (max-width: 800px){
         h2{
-            font-size: .8em;
+            text-align: center;
+            font-size: .7em;
             color: #292F36;
+        }
+        p{
+            width: 90%;
         }
     }
 `
