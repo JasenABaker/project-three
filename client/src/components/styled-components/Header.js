@@ -29,6 +29,17 @@ export const Header = styled.header `
         color:#EFE9E7;
         font-size: 24px;
     }
+
+    @media screen and (max-width: 800px){
+        h1{
+            font-size: 3em;
+        }
+        nav{
+            margin-right: auto;
+            width: 50%;
+        }
+     
+    }
     
 `
 

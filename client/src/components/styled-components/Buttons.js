@@ -18,6 +18,10 @@ export const Button = styled.button `
             background:#FF6978;
             outline-style:none;
         }
+        @media screen and (max-width: 800px) {
+            width: 150px;
+            font-size: 18px;
+        }
 
 `
 export const ButtonDelete = Button.extend`

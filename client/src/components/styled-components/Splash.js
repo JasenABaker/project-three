@@ -16,6 +16,13 @@ export const Splash = styled.div `
         width: auto;
         position: absolute;
     }
+
+    @media screen and (max-width: 800px){
+        h2{
+            font-size: .8em;
+            color: #71B48D;
+        }
+    }
     
 `
 export const ButtonText = styled.div`
@@ -39,6 +46,12 @@ export const ButtonText = styled.div`
         width: 50%;
         background-color: rgba(41,47,54,.8);
         padding: 5px;
+    }
+    @media screen and (max-width: 800px){
+        h2{
+            font-size: .8em;
+            color: #292F36;
+        }
     }
 `
 export const WorldSplash = Splash.extend`

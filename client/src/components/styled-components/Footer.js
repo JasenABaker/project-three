@@ -19,6 +19,12 @@ const StyleFooter = styled.footer`
     h1{
         color:#EFE9E7;
     }
+    @media screen and (max-width: 800px) {
+        height: 20vh;
+        h1{
+            font-size: .9em;
+        }
+    }
 `
 
 const ButtonDiv = styled.div`
@@ -26,6 +32,9 @@ const ButtonDiv = styled.div`
     width: 50%;
     display: flex;
     justify-content: space-around;
+    @media screen and (max-width: 800px) {
+        width: 100%;
+    }
 `
 
 

@@ -11,6 +11,10 @@ const StyledSvg = styled.svg`
         &:hover {
             fill:#DBD56E;
         }
+        @media screen and (max-width: 800px) {
+            height: 30px;
+            width: 30px;
+        }
 `
 const StyledSvgUser = StyledSvg.extend`
         transform: translateY(-18px);
