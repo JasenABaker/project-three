@@ -30,6 +30,10 @@ export const ContainerOneSimple = ContainerOne.extend`
     margin-top: 10px;
     justify-content: center;
     margin-bottom: 20px;
+
+    @media screen and (max-width: 800px){
+        flex-driection: column;
+    }
 `
 export const ContainerTwo = styled.div`
     height: 75vh;

@@ -29,6 +29,12 @@ const LeftSide = styled.div`
         font-style: italic;
         color:#9DA0A3;
     }
+    @media screen and (max-width: 800px){
+        height: 50vh;
+        width: 100%;
+        margin: 0 10px 0 20px;
+
+    }
 
 `
 const RightSide = styled.div`
@@ -40,6 +46,14 @@ const RightSide = styled.div`
 
     span{
         font-weight: bold;
+    }
+
+    @media screen and (max-width: 800px) {
+        height: 70vh;
+        width: 100%;
+        flew-wrap: wrap;
+        marign-left: 0px;
+        margin-top: 0px;
     }
 
 `
@@ -58,6 +72,9 @@ const ImgHolder = styled.div`
     img{
         height: 100%;
         width: auto;
+    }
+    @media screen and (max-width: 800px){
+        display: none;
     }
 `
 
